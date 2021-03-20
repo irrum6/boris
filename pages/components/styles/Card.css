@@ -1,0 +1,76 @@
+.card-red {
+  color: #ff4800;
+}
+
+.card-black {
+  color: #202020;
+}
+
+.card-pink {
+  color: #f87cf8;
+}
+
+.card-box {
+  border: 1px solid black;
+  height: 32vmin;
+  width: 24vmin;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden_card {
+  background: url("card_back.svg");
+}
+
+.spades {
+  background: url("card_spades_back.svg");
+}
+
+.clubs {
+  background: url("card_clubs_back.svg");
+}
+
+.hearts {
+  background: url("card_hearts_back.svg");
+}
+
+.diamonds {
+  background: url("card_diamonds_back.svg");
+}
+
+.card-body {
+  text-align: center;
+}
+
+@media screen and (max-aspect-ratio: 3/2) {
+  .card-box {
+    width: 21vmin;
+    height: 28vmin;
+    padding: 0;
+  }
+}
+@media screen and (max-aspect-ratio: 5/4) {
+  .card-box {
+    width: 18vmin;
+    height: 24vmin;
+    padding: 0;
+  }
+}
+@media screen and (max-aspect-ratio: 1/1) {
+  .card-box {
+    width: 21vmin;
+    height: 28vmin;
+    padding: 0;
+  }
+}
+@media screen and (max-aspect-ratio: 4/5) {
+  .card-box {
+    height: 32vmin;
+    width: 24vmin;
+    padding: 0;
+  }
+}
+
+/*# sourceMappingURL=Card.css.map */

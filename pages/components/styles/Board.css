@@ -1,0 +1,32 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, auto);
+  row-gap: 2vmin;
+}
+
+@media screen and (max-aspect-ratio: 3/2) {
+  .board {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+  }
+}
+@media screen and (max-aspect-ratio: 5/4) {
+  .board {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+  }
+}
+@media screen and (max-aspect-ratio: 1/1) {
+  .board {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+  }
+}
+@media screen and (max-aspect-ratio: 4/5) {
+  .board {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+  }
+}
+
+/*# sourceMappingURL=Board.css.map */

@@ -1,0 +1,80 @@
+#promptWindow {
+    display: none;
+}
+
+div.prompt {
+    padding: 1vmin;
+    padding-bottom: 2vmin;
+    position: fixed;
+    left: 30vmin;
+    top: 30vh;
+    z-index: 3;
+    width: 75vmin;
+    min-height: 40vmin;
+    background-color: #108020;
+    border: 0.5vmin solid black;
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+div.prompt-row {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+
+div.close {
+    padding: 1vmin;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+button.choice {
+    padding: 0.5vmin;
+    font-size: 5vmin;
+    font-weight: bold;
+    margin: 0.2rem;
+    cursor: pointer;
+}
+
+button.close {
+    // background: transparent;
+    padding:0;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    margin-left:0.5rem;
+    font-size: 5vmin;
+    font-weight: 900;
+    border: 0;
+    border-radius:10%;
+    color: black;
+    cursor: pointer;
+}
+
+@media screen and (max-aspect-ratio:1/1) {
+    div.prompt {
+        top: 40vh;
+        left: 10vmin;
+        top: 30vh;
+    }
+}
+@media screen and (min-aspect-ratio:3/2){
+    div.prompt{
+        width: 50vmin;
+        height: 35vmin;       
+    }
+}
+$closeGreen: #80b040;
+$closeBlue: #4080b0;
+$closeRed: #b04080;
+
+.close-green {
+    background-color:$closeGreen;
+}
+.close-blue {
+    background-color:$closeBlue;
+}
+.close-red {
+    background-color:$closeRed;
+}

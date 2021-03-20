@@ -1,0 +1,39 @@
+#listWindow {
+    display: none;
+    padding-bottom: 2vmin;
+    position: absolute;
+    left: 30vmin;
+    top: 30vh;
+    z-index: 3;
+    width: 40vmin;
+    background-color: #489048;
+    border: 0.5vmin solid black;
+    border-radius: 3%;
+}
+
+@media screen and (max-aspect-ratio:1/1){
+    #listWindow {
+        width: 80vmin;
+        left: 10vmin;
+        top: 30vh;
+    }
+}
+
+#listWindow div.closer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#scorelist .record-score::before{
+    content: '▶';
+}
+#scorelist .record-box:nth-child(2){
+    background-color: #249048;
+    font-weight: 900;
+}
+
+#scorelist .record-box:nth-child(2n+1) {
+    background-color: #904824;
+    color:#489024;
+    font-weight: 900;
+}

@@ -1,0 +1,116 @@
+html {
+  font-size: 16px;
+}
+$rems:(
+    "0": 0,
+    "q": 0.25rem,
+    "h": 0.5rem,
+    "3q":0.75rem,
+    "1": 1rem,
+    "1h":1.5rem,
+    "2": 2rem,
+    "3": 3rem,
+    "4": 4rem,  
+    "5": 5rem,
+    "6": 6rem
+);
+ 
+@each $k, $v in $rems {
+    .p#{$k} {
+      padding: $v;
+    }
+    .pl#{$k} {
+      padding-left: $v;
+    }
+    .pr#{$k} {
+      padding-right: $v;
+    }
+    .px#{$k} {
+      padding-left: $v;
+      padding-right: $v;
+    }    
+    .pt#{$k} {
+      padding-top: $v;
+    }
+    .pb#{$k} {
+      padding-bottom: $v;
+    }
+    .py#{$k} {
+      padding-top: $v;
+      padding-bottom: $v;
+    }
+    .f#{$k} {
+      font-size: $v;
+    }
+    .m#{$k} {
+      margin: $v;
+    }
+    .ml#{$k} {
+      margin-left: $v;
+    }
+    .mr#{$k} {
+      margin-right: $v;
+    }
+    .mt#{$k} {
+      margin-top: $v;
+    }
+    .mb#{$k} {
+      margin-bottom: $v;
+    }
+    
+  }
+
+.zero-border{
+  border: 0;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.bolder {
+  font-weight: 900;
+}
+// flex utilities
+.flex {
+  display: flex;
+}
+.row {
+  flex-direction: row;
+}
+.column{
+  flex-direction: column;
+}
+.row-reverse{
+  flex-direction: row-reverse;
+}
+.column-reverse{
+  flex-direction: column-reverse;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+.space-even {
+  justify-content: space-evenly;
+}
+
+.inline {
+  display: inline;
+}
+// color utilities
+.bg-transparent{
+  background: transparent;
+}
+
+.black {
+  color: black;
+}
+
+.bg-black {
+  background-color: black;
+}

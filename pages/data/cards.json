@@ -1,0 +1,314 @@
+[
+    {
+        "value": "2",
+        "suit": "hearts",
+        "color": "red",
+        "symbol": "♥"
+    },
+    {
+        "value": "3",
+        "suit": "hearts",
+        "color": "red",
+        "symbol": "♥"
+    },
+    {
+        "value": "4",
+        "suit": "hearts",
+        "color": "red",
+        "symbol": "♥"
+    },
+    {
+        "value": "5",
+        "suit": "hearts",
+        "color": "red",
+        "symbol": "♥"
+    },
+    {
+        "value": "6",
+        "suit": "hearts",
+        "color": "red",
+        "symbol": "♥"
+    },
+    {
+        "value": "7",
+        "suit": "hearts",
+        "color": "red",
+        "symbol": "♥"
+    },
+    {
+        "value": "8",
+        "suit": "hearts",
+        "color": "red",
+        "symbol": "♥"
+    },
+    {
+        "value": "9",
+        "suit": "hearts",
+        "color": "red",
+        "symbol": "♥"
+    },
+    {
+        "value": "10",
+        "suit": "hearts",
+        "color": "red",
+        "symbol": "♥"
+    },
+    {
+        "value": "J",
+        "suit": "hearts",
+        "color": "red",
+        "symbol": "♥"
+    },
+    {
+        "value": "Q",
+        "suit": "hearts",
+        "color": "red",
+        "symbol": "♥"
+    },
+    {
+        "value": "K",
+        "suit": "hearts",
+        "color": "red",
+        "symbol": "♥"
+    },
+    {
+        "value": "A",
+        "suit": "hearts",
+        "color": "red",
+        "symbol": "♥"
+    },
+    {
+        "value": "2",
+        "suit": "diamonds",
+        "color": "red",
+        "symbol": "♦"
+    },
+    {
+        "value": "3",
+        "suit": "diamonds",
+        "color": "red",
+        "symbol": "♦"
+    },
+    {
+        "value": "4",
+        "suit": "diamonds",
+        "color": "red",
+        "symbol": "♦"
+    },
+    {
+        "value": "5",
+        "suit": "diamonds",
+        "color": "red",
+        "symbol": "♦"
+    },
+    {
+        "value": "6",
+        "suit": "diamonds",
+        "color": "red",
+        "symbol": "♦"
+    },
+    {
+        "value": "7",
+        "suit": "diamonds",
+        "color": "red",
+        "symbol": "♦"
+    },
+    {
+        "value": "8",
+        "suit": "diamonds",
+        "color": "red",
+        "symbol": "♦"
+    },
+    {
+        "value": "9",
+        "suit": "diamonds",
+        "color": "red",
+        "symbol": "♦"
+    },
+    {
+        "value": "10",
+        "suit": "diamonds",
+        "color": "red",
+        "symbol": "♦"
+    },
+    {
+        "value": "J",
+        "suit": "diamonds",
+        "color": "red",
+        "symbol": "♦"
+    },
+    {
+        "value": "Q",
+        "suit": "diamonds",
+        "color": "red",
+        "symbol": "♦"
+    },
+    {
+        "value": "K",
+        "suit": "diamonds",
+        "color": "red",
+        "symbol": "♦"
+    },
+    {
+        "value": "A",
+        "suit": "diamonds",
+        "color": "red",
+        "symbol": "♦"
+    },
+    {
+        "value": "2",
+        "suit": "clubs",
+        "color": "black",
+        "symbol": "♣"
+    },
+    {
+        "value": "3",
+        "suit": "clubs",
+        "color": "black",
+        "symbol": "♣"
+    },
+    {
+        "value": "4",
+        "suit": "clubs",
+        "color": "black",
+        "symbol": "♣"
+    },
+    {
+        "value": "5",
+        "suit": "clubs",
+        "color": "black",
+        "symbol": "♣"
+    },
+    {
+        "value": "6",
+        "suit": "clubs",
+        "color": "black",
+        "symbol": "♣"
+    },
+    {
+        "value": "7",
+        "suit": "clubs",
+        "color": "black",
+        "symbol": "♣"
+    },
+    {
+        "value": "8",
+        "suit": "clubs",
+        "color": "black",
+        "symbol": "♣"
+    },
+    {
+        "value": "9",
+        "suit": "clubs",
+        "color": "black",
+        "symbol": "♣"
+    },
+    {
+        "value": "10",
+        "suit": "clubs",
+        "color": "black",
+        "symbol": "♣"
+    },
+    {
+        "value": "J",
+        "suit": "clubs",
+        "color": "black",
+        "symbol": "♣"
+    },
+    {
+        "value": "Q",
+        "suit": "clubs",
+        "color": "black",
+        "symbol": "♣"
+    },
+    {
+        "value": "K",
+        "suit": "clubs",
+        "color": "black",
+        "symbol": "♣"
+    },
+    {
+        "value": "A",
+        "suit": "clubs",
+        "color": "black",
+        "symbol": "♣"
+    },
+    {
+        "value": "2",
+        "suit": "spades",
+        "color": "black",
+        "symbol": "♠"
+    },
+    {
+        "value": "3",
+        "suit": "spades",
+        "color": "black",
+        "symbol": "♠"
+    },
+    {
+        "value": "4",
+        "suit": "spades",
+        "color": "black",
+        "symbol": "♠"
+    },
+    {
+        "value": "5",
+        "suit": "spades",
+        "color": "black",
+        "symbol": "♠"
+    },
+    {
+        "value": "6",
+        "suit": "spades",
+        "color": "black",
+        "symbol": "♠"
+    },
+    {
+        "value": "7",
+        "suit": "spades",
+        "color": "black",
+        "symbol": "♠"
+    },
+    {
+        "value": "8",
+        "suit": "spades",
+        "color": "black",
+        "symbol": "♠"
+    },
+    {
+        "value": "9",
+        "suit": "spades",
+        "color": "black",
+        "symbol": "♠"
+    },
+    {
+        "value": "10",
+        "suit": "spades",
+        "color": "black",
+        "symbol": "♠"
+    },
+    {
+        "value": "J",
+        "suit": "spades",
+        "color": "black",
+        "symbol": "♠"
+    },
+    {
+        "value": "Q",
+        "suit": "spades",
+        "color": "black",
+        "symbol": "♠"
+    },
+    {
+        "value": "K",
+        "suit": "spades",
+        "color": "black",
+        "symbol": "♠"
+    },
+    {
+        "value": "A",
+        "suit": "spades",
+        "color": "black",
+        "symbol": "♠"
+    }
+]
