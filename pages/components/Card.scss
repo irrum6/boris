@@ -24,19 +24,19 @@ $pink: #f87cf8;
   align-items: center;
 }
 .hidden_card{
-  background:url('card_back.svg');
+  background:url('/images/card_back.svg');
 }
 .spades {
-  background:url('card_spades_back.svg');
+  background:url('/images/card_spades_back.svg');
 }
 .clubs {
-  background:url('card_clubs_back.svg');
+  background:url('/images/card_clubs_back.svg');
 }
 .hearts{
-  background:url('card_hearts_back.svg');
+  background:url('/images/card_hearts_back.svg');
 }
 .diamonds{
-  background:url('card_diamonds_back.svg');
+  background:url('/images/card_diamonds_back.svg');
 }
 
 .card-body {
