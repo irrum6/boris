@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
-// import './Board.module.css'
 import Card from './Card';
-
-// Image by WikimediaImages from Pixabay
 
 class Board extends Component {
     render() {

@@ -76,7 +76,6 @@ class FortunaApp extends Component {
     }
     GameOver() {
         ShowAlertMessage('თამაში მორჩა !');
-        // CloseWindow();
         ClosePrompt();
         this.SaveRecord();
     }
@@ -101,9 +100,7 @@ class FortunaApp extends Component {
 
         cards[previousCardIndex].show = true;
 
-        this.setState({ cards, score, gameOver, previousCardIndex, currentCardindex, gameWon })
-
-        // ShowWindow();
+        this.setState({ cards, score, gameOver, previousCardIndex, currentCardindex, gameWon });
         ShowPrompt();
     }
     SaveRecord() {
