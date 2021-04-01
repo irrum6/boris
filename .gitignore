@@ -1,7 +1,7 @@
 #development
 */node_modules
 # */*.css.map
-*/*.css
+# */*.css
 # */pages/components/styles/*.css
 */pages/components/styles/*.css.map 
 # use sass ./:./ to compile
