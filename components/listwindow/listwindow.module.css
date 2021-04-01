@@ -1,5 +1,5 @@
 @charset "UTF-8";
-#listWindow {
+div.listWindow {
   display: none;
   padding-bottom: 2vmin;
   position: absolute;
@@ -13,30 +13,30 @@
 }
 
 @media screen and (max-aspect-ratio: 1/1) {
-  #listWindow {
+  div.listWindow {
     width: 80vmin;
     left: 10vmin;
     top: 30vh;
   }
 }
-#listWindow div.closer {
+div.listWindow div.closer {
   display: flex;
   justify-content: flex-end;
 }
 
-#scorelist .record-score::before {
+div.scorelist .record-score::before {
   content: "▶";
 }
 
-#scorelist .record-box:nth-child(2) {
+div.scorelist .record-box:nth-child(2) {
   background-color: #249048;
   font-weight: 900;
 }
 
-#scorelist .record-box:nth-child(2n+1) {
+div.scorelist .record-box:nth-child(2n+1) {
   background-color: #904824;
   color: #489024;
   font-weight: 900;
 }
 
-/*# sourceMappingURL=listwindow.css.map */
+/*# sourceMappingURL=listwindow.module.css.map */

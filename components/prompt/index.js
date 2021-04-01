@@ -1,7 +1,6 @@
 import React from 'react'
 
-import DW from './dragwindow'
-import {Show,Close} from './dragwindow'
+import DW,{Show,Close} from '../dragwindow'
 
 const WindowId = "promptWindow";
 

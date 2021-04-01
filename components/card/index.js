@@ -1,17 +1,19 @@
 import React from 'react'
 
+import styles from "./card.module.css"
+
 const card = (props) => {
     const data = props.cdata;
 
     let { show, suit, value } = data;
     value = show ? value : '';
 
-    let backCssClass = show ? suit: "hidden_card";
-    let boxClassName = `flex space-between column pxq pyq card-box ${backCssClass}`;
-
+    let backCssClass = show ? styles[suit]: styles["hidden_card"];
+    let boxClassName = `flex space-between column pxq pyq ${styles["card-box"]} ${backCssClass}`;
+    //console.log(styles);
     return (
         <div className={boxClassName}>            
-            <div className="flex row pth pbh card-body">
+            <div className={`${styles["card-body"]} flex row pth pbh`}>
                 <span className="f4">{value}</span>
             </div>            
         </div>

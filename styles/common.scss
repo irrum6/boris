@@ -98,6 +98,9 @@ $rems:(
 .space-even {
   justify-content: space-evenly;
 }
+.centered {
+  justify-content: center;
+}
 
 .inline {
   display: inline;
@@ -113,4 +116,8 @@ $rems:(
 
 .bg-black {
   background-color: black;
+}
+
+div.override-none{
+  display: none !important;
 }

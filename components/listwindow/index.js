@@ -1,21 +1,20 @@
 import React from 'react'
 
-import DW from './dragwindow'
-import { Show, Close } from './dragwindow'
-
+import DW,{ Show, Close } from '../dragwindow'
+import styles from "./listwindow.module.css"
 const windowId = "listWindow";
 const GetSelf = () => document.getElementById(windowId)
 const ShowSelf = () => Show(windowId);
 const CloseSelf = () => Close(windowId);
 
 const listDisplay = () => {
-    return (<DW wid="listWindow">
+    return (<DW wid={windowId} className={styles["listWindow"]}>
         <div className="list-row px0">
             <div className="flex pyq space-even">
                 <span data-app-translate="1" data-app-text="date">თარიღი</span>
                 <span data-app-translate="1" data-app-text="score">ქულა</span>
             </div>
-            <div id="scorelist">
+            <div id="scorelist" className={styles["scorelist"]}>
             </div>
         </div>
     </DW>);
@@ -32,7 +31,7 @@ const insert_record = (cont, element) => {
     score.classList.add("record-score");
     score.textContent = element.score;
     const box = document.createElement('div');
-    box.classList.add('record-box');
+    box.classList.add(styles['record-box']);
     box.classList.add('flex');
     box.classList.add('space-even');
     box.appendChild(date);

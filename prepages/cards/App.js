@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import Navbar from './components/Navbar';
-import Board from './components/Board';
-import Prompter,{ShowPrompt, ClosePrompt } from './components/Prompt';
-import AlertMessage, { ShowAlertMessage } from './components/alert';
-import ListDisplay, { showList } from './components/listwindow';
+import Navbar from '../../components/navbar'
+import Board from '../../components/board'
+import Prompter,{ShowPrompt, ClosePrompt } from '../../components/prompt/'
+import AlertMessage, { ShowAlertMessage } from '../../components/alert/'
+import ListDisplay, { showList } from '../../components/listwindow/'
 
-import CARDS from './data/cards.json';
+import CARDS from '../../data/cards.json';
 
-import Utils from './data/utils';
+import Utils from '../../data/utils';
 
 const SEQUENCE = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
 

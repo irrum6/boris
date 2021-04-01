@@ -1,12 +1,4 @@
-#development
-*/node_modules
-# */*.css.map
-# */*.css
-# */pages/components/styles/*.css
-*/pages/components/styles/*.css.map 
-# use sass ./:./ to compile
-compile.sh
-watch.sh
 node_modules
-node_modules
+/node_modules
 .next
+components/*/*.css.map

@@ -660,4 +660,8 @@ html {
   background-color: black;
 }
 
+div.override-none {
+  display: none !important;
+}
+
 /*# sourceMappingURL=common.css.map */
