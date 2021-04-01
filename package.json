@@ -1,7 +1,7 @@
 {
-  "name": "webpad",
-  "version": "1.0.0",
-  "description": "notepad.cc like web site",
+  "name": "boris",
+  "version": "0.6.2",
+  "description": "stupid card game",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
