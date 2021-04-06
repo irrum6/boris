@@ -10,9 +10,13 @@ elif [ "$1" = 'listwindow' ]; then
 elif [ "$1" = 'board' ]; then
     sass components/board/board.module.scss components/board/board.module.css
 elif [ "$1" = 'common' ]; then
-    sass styles/common.scss pages/styles/common.css
+    sass styles/common.scss styles/common.css
+elif [ "$1" = 'com' ]; then
+    sass styles/common.scss styles/common.css
 elif [ "$1" = 'collors' ]; then
-    sass styles/colors.scss pages/styles/colors.css
+    sass styles/colors.scss styles/colors.css
+elif [ "$1" = 'rgb' ]; then
+    sass styles/colors.scss styles/colors.css
 else
     sass components/navbar/navbar.module.scss components/navbar/navbar.module.css
     sass components/listwindow/listwindow.module.scss components/listwindow/listwindow.module.css

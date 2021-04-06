@@ -56,6 +56,16 @@ html {
   margin-bottom: 0;
 }
 
+.mx0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.my0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .pq {
   padding: 0.25rem;
 }
@@ -107,6 +117,16 @@ html {
 }
 
 .mbq {
+  margin-bottom: 0.25rem;
+}
+
+.mxq {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.myq {
+  margin-top: 0.25rem;
   margin-bottom: 0.25rem;
 }
 
@@ -164,6 +184,16 @@ html {
   margin-bottom: 0.5rem;
 }
 
+.mxh {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.myh {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .p3q {
   padding: 0.75rem;
 }
@@ -215,6 +245,16 @@ html {
 }
 
 .mb3q {
+  margin-bottom: 0.75rem;
+}
+
+.mx3q {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.my3q {
+  margin-top: 0.75rem;
   margin-bottom: 0.75rem;
 }
 
@@ -272,6 +312,16 @@ html {
   margin-bottom: 1rem;
 }
 
+.mx1 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.my1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .p1h {
   padding: 1.5rem;
 }
@@ -323,6 +373,16 @@ html {
 }
 
 .mb1h {
+  margin-bottom: 1.5rem;
+}
+
+.mx1h {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.my1h {
+  margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
@@ -380,6 +440,16 @@ html {
   margin-bottom: 2rem;
 }
 
+.mx2 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.my2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .p3 {
   padding: 3rem;
 }
@@ -431,6 +501,16 @@ html {
 }
 
 .mb3 {
+  margin-bottom: 3rem;
+}
+
+.mx3 {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.my3 {
+  margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
@@ -488,6 +568,16 @@ html {
   margin-bottom: 4rem;
 }
 
+.mx4 {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.my4 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
 .p5 {
   padding: 5rem;
 }
@@ -542,6 +632,16 @@ html {
   margin-bottom: 5rem;
 }
 
+.mx5 {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.my5 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .p6 {
   padding: 6rem;
 }
@@ -593,6 +693,16 @@ html {
 }
 
 .mb6 {
+  margin-bottom: 6rem;
+}
+
+.mx6 {
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+.my6 {
+  margin-top: 6rem;
   margin-bottom: 6rem;
 }
 
@@ -652,12 +762,20 @@ html {
   background: transparent;
 }
 
+.bg-blend {
+  background-color: transparent;
+}
+
 .black {
   color: black;
 }
 
 .bg-black {
   background-color: black;
+}
+
+div.override-none {
+  display: none !important;
 }
 
 /*# sourceMappingURL=common.css.map */

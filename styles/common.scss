@@ -57,6 +57,14 @@ $rems:(
     .mb#{$k} {
       margin-bottom: $v;
     }
+    .mx#{$k} {
+      margin-left: $v;
+      margin-right: $v;
+    }
+    .my#{$k} {
+      margin-top: $v;
+      margin-bottom: $v;
+    }
     
   }
 
@@ -108,6 +116,10 @@ $rems:(
 // color utilities
 .bg-transparent{
   background: transparent;
+}
+
+.bg-blend{
+  background-color: transparent;
 }
 
 .black {

@@ -1,3 +1,22 @@
-.bg-blend{
-    background-color: transparent;
+$colors :(
+    "_red":#ff4040,
+    "_green":#80ff40,
+    "_blue":#4080ff,
+    "_violet":#f040f0,
+    "_black":black,
+    "_white":white,
+    "_litegray":#808080,
+    "_darkgray":#404040,
+    "_neonred":#ff2020,
+    "_neongreen":#40ff40,
+    "_neonblue":#4040ff
+);
+
+@each $k,$v in $colors{
+    .color#{$k}{
+        color:$v
+    }
+    .bg#{$k}{
+        background-color:$v
+    }
 }
