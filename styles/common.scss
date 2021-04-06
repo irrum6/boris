@@ -65,6 +65,17 @@ $rems:(
       margin-top: $v;
       margin-bottom: $v;
     }
+    .bow#{$k} {
+      border-width: $v;
+    }
+    .bowx#{$k} {
+      border-left-width: $v;
+      border-right-width: $v;
+    }
+    .bowy#{$k} {
+      border-top-width: $v;
+      border-bottom-width: $v;
+    }
     
   }
 
@@ -132,4 +143,14 @@ $rems:(
 
 div.override-none{
   display: none !important;
+}
+.stretch{
+  width: 100%;
+}
+
+.pointer{
+  cursor: pointer;
+}
+.bo-solid {
+  border-style: solid;
 }

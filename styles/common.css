@@ -66,6 +66,20 @@ html {
   margin-bottom: 0;
 }
 
+.bow0 {
+  border-width: 0;
+}
+
+.bowx0 {
+  border-left-width: 0;
+  border-right-width: 0;
+}
+
+.bowy0 {
+  border-top-width: 0;
+  border-bottom-width: 0;
+}
+
 .pq {
   padding: 0.25rem;
 }
@@ -128,6 +142,20 @@ html {
 .myq {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
+}
+
+.bowq {
+  border-width: 0.25rem;
+}
+
+.bowxq {
+  border-left-width: 0.25rem;
+  border-right-width: 0.25rem;
+}
+
+.bowyq {
+  border-top-width: 0.25rem;
+  border-bottom-width: 0.25rem;
 }
 
 .ph {
@@ -194,6 +222,20 @@ html {
   margin-bottom: 0.5rem;
 }
 
+.bowh {
+  border-width: 0.5rem;
+}
+
+.bowxh {
+  border-left-width: 0.5rem;
+  border-right-width: 0.5rem;
+}
+
+.bowyh {
+  border-top-width: 0.5rem;
+  border-bottom-width: 0.5rem;
+}
+
 .p3q {
   padding: 0.75rem;
 }
@@ -256,6 +298,20 @@ html {
 .my3q {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
+}
+
+.bow3q {
+  border-width: 0.75rem;
+}
+
+.bowx3q {
+  border-left-width: 0.75rem;
+  border-right-width: 0.75rem;
+}
+
+.bowy3q {
+  border-top-width: 0.75rem;
+  border-bottom-width: 0.75rem;
 }
 
 .p1 {
@@ -322,6 +378,20 @@ html {
   margin-bottom: 1rem;
 }
 
+.bow1 {
+  border-width: 1rem;
+}
+
+.bowx1 {
+  border-left-width: 1rem;
+  border-right-width: 1rem;
+}
+
+.bowy1 {
+  border-top-width: 1rem;
+  border-bottom-width: 1rem;
+}
+
 .p1h {
   padding: 1.5rem;
 }
@@ -384,6 +454,20 @@ html {
 .my1h {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+.bow1h {
+  border-width: 1.5rem;
+}
+
+.bowx1h {
+  border-left-width: 1.5rem;
+  border-right-width: 1.5rem;
+}
+
+.bowy1h {
+  border-top-width: 1.5rem;
+  border-bottom-width: 1.5rem;
 }
 
 .p2 {
@@ -450,6 +534,20 @@ html {
   margin-bottom: 2rem;
 }
 
+.bow2 {
+  border-width: 2rem;
+}
+
+.bowx2 {
+  border-left-width: 2rem;
+  border-right-width: 2rem;
+}
+
+.bowy2 {
+  border-top-width: 2rem;
+  border-bottom-width: 2rem;
+}
+
 .p3 {
   padding: 3rem;
 }
@@ -512,6 +610,20 @@ html {
 .my3 {
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+
+.bow3 {
+  border-width: 3rem;
+}
+
+.bowx3 {
+  border-left-width: 3rem;
+  border-right-width: 3rem;
+}
+
+.bowy3 {
+  border-top-width: 3rem;
+  border-bottom-width: 3rem;
 }
 
 .p4 {
@@ -578,6 +690,20 @@ html {
   margin-bottom: 4rem;
 }
 
+.bow4 {
+  border-width: 4rem;
+}
+
+.bowx4 {
+  border-left-width: 4rem;
+  border-right-width: 4rem;
+}
+
+.bowy4 {
+  border-top-width: 4rem;
+  border-bottom-width: 4rem;
+}
+
 .p5 {
   padding: 5rem;
 }
@@ -642,6 +768,20 @@ html {
   margin-bottom: 5rem;
 }
 
+.bow5 {
+  border-width: 5rem;
+}
+
+.bowx5 {
+  border-left-width: 5rem;
+  border-right-width: 5rem;
+}
+
+.bowy5 {
+  border-top-width: 5rem;
+  border-bottom-width: 5rem;
+}
+
 .p6 {
   padding: 6rem;
 }
@@ -704,6 +844,20 @@ html {
 .my6 {
   margin-top: 6rem;
   margin-bottom: 6rem;
+}
+
+.bow6 {
+  border-width: 6rem;
+}
+
+.bowx6 {
+  border-left-width: 6rem;
+  border-right-width: 6rem;
+}
+
+.bowy6 {
+  border-top-width: 6rem;
+  border-bottom-width: 6rem;
 }
 
 .zero-border {
@@ -776,6 +930,18 @@ html {
 
 div.override-none {
   display: none !important;
+}
+
+.stretch {
+  width: 100%;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.bo-solid {
+  border-style: solid;
 }
 
 /*# sourceMappingURL=common.css.map */
