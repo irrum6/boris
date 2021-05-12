@@ -8,7 +8,7 @@ const DW = (props) => {
     const { noclose, wid } = props;
     return (
         <Draggable>
-            < div className="prompt override-none" id={wid}>
+            < div className="prompt " id={wid}>
                 <div className="close">
                     {noclose ? <button className="close bg-blend">&#x25cf;</button> : <button className="close close-red" onClick={Close.bind(null, wid)}>&#x25AC;</button>}
                 </div>

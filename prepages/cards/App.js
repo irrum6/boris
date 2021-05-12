@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 
-import Navbar from '../../components/navbar'
-import Board from '../../components/board'
-import Prompter,{ShowPrompt, ClosePrompt } from '../../components/prompt/'
-import AlertMessage, { ShowAlertMessage } from '../../components/alert/'
-import ListDisplay, { showList } from '../../components/listwindow/'
+import { Navbar, Board, Prompter, ShowPrompt, ClosePrompt, AlertMessage, ShowAlertMessage, ListDisplay, showList } from "../../components/"
 
 import CARDS from '../../data/cards.json';
 
