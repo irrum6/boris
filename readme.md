@@ -1,2 +1,1 @@
-
-notepad.cc like web site
+stupid card game in react
