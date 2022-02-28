@@ -1,8 +1,6 @@
 #compile
 if [ "$1" = 'card' ]; then
 	sass components/card/card.module.scss components/card/card.module.css
-elif [ "$1" = 'prompt' ]; then
-	 sass styles/prompt.scss styles/prompt.css
 elif [ "$1" = 'navbar' ]; then
     sass components/navbar/navbar.module.scss components/navbar/navbar.module.css
 elif [ "$1" = 'listwindow' ]; then
@@ -13,7 +11,7 @@ elif [ "$1" = 'common' ]; then
     sass styles/common.scss styles/common.css
 elif [ "$1" = 'com' ]; then
     sass styles/common.scss styles/common.css
-elif [ "$1" = 'collors' ]; then
+elif [ "$1" = 'colors' ]; then
     sass styles/colors.scss styles/colors.css
 elif [ "$1" = 'rgb' ]; then
     sass styles/colors.scss styles/colors.css

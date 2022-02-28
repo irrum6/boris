@@ -55,12 +55,7 @@ button.close {
     top: 30vh;
   }
 }
-@media screen and (min-aspect-ratio: 3/2) {
-  div.prompt {
-    width: 50vmin;
-    height: 35vmin;
-  }
-}
+
 .close-green {
   background-color: #80b040;
 }
@@ -72,5 +67,3 @@ button.close {
 .close-red {
   background-color: #b04080;
 }
-
-/*# sourceMappingURL=prompt.css.map */

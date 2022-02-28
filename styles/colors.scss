@@ -9,17 +9,27 @@ $colors :(
     "_darkgray":#404040,
     "_neonred":#ff2020,
     "_neongreen":#40ff40,
-    "_neonblue":#4040ff
+    "_neonblue":#4040ff,
+    "_darkred":#802020,
+    "_darkgreen":#208020,
+    "_darkblue":#202080
 );
 
 @each $k,$v in $colors{
     .color#{$k}{
         color:$v
     }
+}
+
+@each $k,$v in $colors{
     .bg#{$k}{
         background-color:$v
     }
+}
+
+@each $k,$v in $colors{
     .bo#{$k}{
         border-color: $v;
     }
 }
+
