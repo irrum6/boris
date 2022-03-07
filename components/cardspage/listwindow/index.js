@@ -1,6 +1,6 @@
 import React from 'react'
 
-import DW,{ Show, Close } from '../dragwindow'
+import DW,{ Show, Close } from '../../common/dragwindow'
 import styles from "./listwindow.module.css"
 const windowId = "listWindow";
 const GetSelf = () => document.getElementById(windowId)

@@ -12,8 +12,8 @@ const alertMessage = () => {
         <div className="text-center">
             <span id="alertmsg" className="f2 bold"></span>
         </div>
-        <div className="closer flex row centered">
-            <button className="f1h bolder" onClick={CloseSelf}>OK</button>
+        <div className="closer flex row centered mt2">
+            <button className="f4 bolder" onClick={CloseSelf}>OK</button>
         </div>
     </DW>);
 }

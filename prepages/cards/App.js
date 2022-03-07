@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 
-import { Navbar, Board, Prompter, ShowPrompt, ClosePrompt, AlertMessage, ShowAlertMessage, ListDisplay, showList } from "../../components/"
+import { AlertMessage, ShowAlertMessage, Prompter, ShowPrompt, ClosePrompt, } from "../../components/"
+
+import { Navbar, Board, ListDisplay, showList } from "../../components/cardspage/index"
 
 import CARDS from '../../data/cards.json';
 

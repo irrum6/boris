@@ -24,24 +24,23 @@ $rems:(
     }
     .pr#{$k} {
       padding-right: $v;
-    }
-    .px#{$k} {
-      padding-left: $v;
-      padding-right: $v;
-    }    
+    }        
     .pt#{$k} {
       padding-top: $v;
     }
     .pb#{$k} {
       padding-bottom: $v;
     }
+    .px#{$k} {
+      padding-left: $v;
+      padding-right: $v;
+    }
     .py#{$k} {
       padding-top: $v;
       padding-bottom: $v;
     }
-    .f#{$k} {
-      font-size: $v;
-    }
+  }
+  @each $k,$v in $rems {
     .m#{$k} {
       margin: $v;
     }
@@ -65,6 +64,15 @@ $rems:(
       margin-top: $v;
       margin-bottom: $v;
     }
+  }
+
+  @each $k, $v in $rems {
+    .f#{$k} {
+      font-size: $v;
+    }
+  }
+
+  @each $k, $v in $rems {
     .bow#{$k} {
       border-width: $v;
     }
@@ -76,7 +84,6 @@ $rems:(
       border-top-width: $v;
       border-bottom-width: $v;
     }
-    
   }
 
 .zero-border{
