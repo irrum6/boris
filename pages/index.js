@@ -83,6 +83,9 @@ export default function Home() {
             <div>
                 <a href="cards">Play some cards game.</a>
             </div>
+            <div>
+                <a href="memory">Play memory game.</a>
+            </div>
         </div>
     )
 }

@@ -1,5 +1,7 @@
 $colors :(
+    "_memred":#f03030,
     "_red":#ff4040,
+    "_memgreen" : #308030,
     "_green":#80ff40,
     "_blue":#4080ff,
     "_violet":#f040f0,
@@ -12,7 +14,18 @@ $colors :(
     "_neonblue":#4040ff,
     "_darkred":#802020,
     "_darkgreen":#208020,
-    "_darkblue":#202080
+    "_darkblue":#202080,
+    "_navy": #000080,
+    "_blend_red": #484032,
+    "_blend_green": #324840,
+    "_blend_blue": #324048,
+    "_navbar_blue":#2c3e50,
+    "_memgrey" : #303030,
+    "_yellow" : #f0f030,
+    "_orange":#b63,
+    "_purple" : #3000ff,
+    "_pink" : #f030f0,
+    "_lightskyblue" : #80e0ff
 );
 
 @each $k,$v in $colors{
