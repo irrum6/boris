@@ -81,10 +81,10 @@ export default function Home() {
             </div>
             <DisplayDate rgb="0" />
             <div>
-                <a href="cards">Play some cards game.</a>
+                <a href="cards" className="color_black pointer mb1 f1h bolder">&gt;&gt;Play some cards game.</a>
             </div>
             <div>
-                <a href="memory">Play memory game.</a>
+                <a href="memory" className="color_black pointer mb1 f1h bolder">&gt;&gt;Play memory game.</a>
             </div>
         </div>
     )
