@@ -83,9 +83,7 @@ class App extends Component {
     this.setState({ cards, noClick });
   }
 
-  NewGame() {
-    // const ng = 'NEW GAME, AHAHAHAHAHHA !'
-    // alert(ng);
+  NewGame() {    
     let cards = this.state.cards.map(c => ({
       ...c,
       state: CARD_STATES.HIDDING
