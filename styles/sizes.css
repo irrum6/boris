@@ -848,6 +848,10 @@ html {
   border-bottom-width: 0;
 }
 
+.bora0 {
+  border-radius: 0;
+}
+
 .bowq {
   border-width: 0.25rem;
 }
@@ -860,6 +864,10 @@ html {
 .bowyq {
   border-top-width: 0.25rem;
   border-bottom-width: 0.25rem;
+}
+
+.boraq {
+  border-radius: 0.25rem;
 }
 
 .bowh {
@@ -876,6 +884,10 @@ html {
   border-bottom-width: 0.5rem;
 }
 
+.borah {
+  border-radius: 0.5rem;
+}
+
 .bow3q {
   border-width: 0.75rem;
 }
@@ -888,6 +900,10 @@ html {
 .bowy3q {
   border-top-width: 0.75rem;
   border-bottom-width: 0.75rem;
+}
+
+.bora3q {
+  border-radius: 0.75rem;
 }
 
 .bow1 {
@@ -904,6 +920,10 @@ html {
   border-bottom-width: 1rem;
 }
 
+.bora1 {
+  border-radius: 1rem;
+}
+
 .bow1q {
   border-width: 1.25rem;
 }
@@ -916,6 +936,10 @@ html {
 .bowy1q {
   border-top-width: 1.25rem;
   border-bottom-width: 1.25rem;
+}
+
+.bora1q {
+  border-radius: 1.25rem;
 }
 
 .bow1h {
@@ -932,6 +956,10 @@ html {
   border-bottom-width: 1.5rem;
 }
 
+.bora1h {
+  border-radius: 1.5rem;
+}
+
 .bow2 {
   border-width: 2rem;
 }
@@ -944,6 +972,10 @@ html {
 .bowy2 {
   border-top-width: 2rem;
   border-bottom-width: 2rem;
+}
+
+.bora2 {
+  border-radius: 2rem;
 }
 
 .bow2h {
@@ -960,6 +992,10 @@ html {
   border-bottom-width: 2.5rem;
 }
 
+.bora2h {
+  border-radius: 2.5rem;
+}
+
 .bow3 {
   border-width: 3rem;
 }
@@ -972,6 +1008,10 @@ html {
 .bowy3 {
   border-top-width: 3rem;
   border-bottom-width: 3rem;
+}
+
+.bora3 {
+  border-radius: 3rem;
 }
 
 .bow4 {
@@ -988,6 +1028,10 @@ html {
   border-bottom-width: 4rem;
 }
 
+.bora4 {
+  border-radius: 4rem;
+}
+
 .bow5 {
   border-width: 5rem;
 }
@@ -1002,6 +1046,10 @@ html {
   border-bottom-width: 5rem;
 }
 
+.bora5 {
+  border-radius: 5rem;
+}
+
 .bow6 {
   border-width: 6rem;
 }
@@ -1014,6 +1062,10 @@ html {
 .bowy6 {
   border-top-width: 6rem;
   border-bottom-width: 6rem;
+}
+
+.bora6 {
+  border-radius: 6rem;
 }
 
 /*# sourceMappingURL=sizes.css.map */

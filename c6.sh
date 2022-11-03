@@ -18,7 +18,7 @@ elif [ "$1" = 'colors' ]; then
 elif [ "$1" = 'rgb' ]; then
     sass styles/colors.scss styles/colors.css
 elif [ "$1" = 'sizes' ]; then
-    $sass styles/sizes.scss styles/sizes.css
+    sass styles/sizes.scss styles/sizes.css
 else
     sass components/cardspage/navbar/navbar.module.scss components/cardspage/navbar/navbar.module.css
     sass components/cardspage/listwindow/listwindow.module.scss components/cardspage/listwindow/listwindow.module.css

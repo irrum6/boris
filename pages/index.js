@@ -82,20 +82,20 @@ export default function Home() {
                     <span className="bg_white color_black pxh">&amp;</span>
                     <span className="bg_black color_white pxh">W</span>
                 </button>
-                <button className="f2 bg-blend pointer">
-                    Cards Game
+                <button className="f3 bolder borah mxq bg_darkgray  pointer">
+                    <a href="/cards" className="no-decor color_white"><span>CARDS</span></a>
                 </button>
-                <button className="f2 bg-blend pointer">
-                    Memory Game
+                <button className="f3 bolder borah mxq bg_white pointer">
+                    <a href="/memory" className="no-decor color_black"><span>MEMORY</span></a>
                 </button>
             </div>
             <DisplayDate rgb="0" />
-            <div>
+            {/* <div>
                 <a href="cards" className="color_black pointer mb1 f1h bolder">&gt;&gt;Play some cards game.</a>
             </div>
             <div>
                 <a href="memory" className="color_black pointer mb1 f1h bolder">&gt;&gt;Play memory game.</a>
-            </div>
+            </div> */}
         </div>
     )
 }

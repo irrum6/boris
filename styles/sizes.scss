@@ -106,4 +106,8 @@ $v in $rems {
         border-top-width: $v;
         border-bottom-width: $v;
     }
+
+    .bora#{$k} {
+        border-radius: $v;
+    }
 }
