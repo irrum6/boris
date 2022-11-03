@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react"
-import Link from "next/link"
+import { useNavigate, Router } from 'react-router-dom';
 
 let _rgb = "0";
-const setrgb = () => {
-    _rgb = _rgb == "0" ? "1" : "0";
-}
+const set_rgb_true = () => _rgb = "1"
+const set_rgb_false = () => _rgb = "0";
+
 const rgb_display = (data) => {
     const { h0, h1, m0, m1, s0, s1 } = data;
     return (<div className="flex row centered">
-        <div className="f3 bolder">
+        <div className="f4 bolder">
             <span className="color_red bg_litegray mxq pxh">{h0}</span>
             <span className="color_red bg_litegray pxh">{h1}</span>
             <span>:</span>
@@ -24,7 +24,7 @@ const rgb_display = (data) => {
 const bw_display = (data) => {
     const { h0, h1, m0, m1, s0, s1 } = data;
     return (<div className="flex row centered">
-        <div className="f3 bolder">
+        <div className="f4 bolder">
             <span className="bg_black color_white mxq pxh">{h0}</span>
             <span className="bg_black color_white pxh">{h1}</span>
             <span>:</span>
@@ -36,7 +36,6 @@ const bw_display = (data) => {
         </div>
     </div>);
 }
-
 
 const DisplayDate = (props) => {
 
@@ -73,10 +72,21 @@ export default function Home() {
     return (
         <div>
             <div className="flex stretch bg_darkgray myh pxq pyh">
-                <button className="f2 bolder bg-blend zero-border pointer" onClick={setrgb}>                    
+                <button className="f3 bolder bg-blend zero-border pointer" onClick={set_rgb_true}>
                     <span className="bg_red pxh">R</span>
                     <span className="bg_green pxh">G</span>
                     <span className="bg_blue pxh">B</span>
+                </button>
+                <button className="f3 bolder color_white bg-blend zero-border pointer" onClick={set_rgb_false}>
+                    <span className="bg_black color_white pxh">B</span>
+                    <span className="bg_white color_black pxh">&amp;</span>
+                    <span className="bg_black color_white pxh">W</span>
+                </button>
+                <button className="f2 bg-blend pointer">
+                    Cards Game
+                </button>
+                <button className="f2 bg-blend pointer">
+                    Memory Game
                 </button>
             </div>
             <DisplayDate rgb="0" />
