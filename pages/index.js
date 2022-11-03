@@ -42,7 +42,7 @@ const DisplayDate = (props) => {
     const [date, setDate] = useState(0);
 
     useEffect(() => {
-        const tid = setInterval(() => { setDate(Date.now()) }, 300);
+        const tid = setInterval(() => { setDate(Date.now()) }, 200);
         return () => clearInterval(tid);//return clearer
     });
 

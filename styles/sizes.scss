@@ -1,0 +1,109 @@
+html {
+    font-size: 16px;
+}
+
+$rems: (
+    "0": 0,
+    "q": 0.25rem,
+    "h": 0.5rem,
+    "3q":0.75rem,
+    "1": 1rem,
+    "1q":1.25rem,
+    "1h":1.5rem,
+    "2": 2rem,
+    "2h": 2.5rem,
+    "3": 3rem,
+    "4": 4rem,
+    "5": 5rem,
+    "6": 6rem
+);
+
+@each $k,
+$v in $rems {
+    .p#{$k} {
+        padding: $v;
+    }
+
+    .pl#{$k} {
+        padding-left: $v;
+    }
+
+    .pr#{$k} {
+        padding-right: $v;
+    }
+
+    .pt#{$k} {
+        padding-top: $v;
+    }
+
+    .pb#{$k} {
+        padding-bottom: $v;
+    }
+
+    .px#{$k} {
+        padding-left: $v;
+        padding-right: $v;
+    }
+
+    .py#{$k} {
+        padding-top: $v;
+        padding-bottom: $v;
+    }
+}
+
+@each $k,
+$v in $rems {
+    .m#{$k} {
+        margin: $v;
+    }
+
+    .ml#{$k} {
+        margin-left: $v;
+    }
+
+    .mr#{$k} {
+        margin-right: $v;
+    }
+
+    .mt#{$k} {
+        margin-top: $v;
+    }
+
+    .mb#{$k} {
+        margin-bottom: $v;
+    }
+
+    .mx#{$k} {
+        margin-left: $v;
+        margin-right: $v;
+    }
+
+    .my#{$k} {
+        margin-top: $v;
+        margin-bottom: $v;
+    }
+}
+
+@each $k,
+$v in $rems {
+    .f#{$k} {
+        font-size: $v;
+    }
+}
+
+@each $k,
+$v in $rems {
+    .bow#{$k} {
+        border-width: $v;
+    }
+
+    .bowx#{$k} {
+        border-left-width: $v;
+        border-right-width: $v;
+    }
+
+    .bowy#{$k} {
+        border-top-width: $v;
+        border-bottom-width: $v;
+    }
+}

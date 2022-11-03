@@ -15,12 +15,15 @@ elif [ "$1" = 'colors' ]; then
     sass styles/colors.scss styles/colors.css
 elif [ "$1" = 'rgb' ]; then
     sass styles/colors.scss styles/colors.css
+elif [ "$1" = 'sizes' ]; then
+    $sass styles/sizes.scss styles/sizes.css
 else
     sass components/navbar/navbar.module.scss components/navbar/navbar.module.css
     sass components/listwindow/listwindow.module.scss components/listwindow/listwindow.module.css
     sass components/board/board.module.scss components/board/board.module.css
 	sass components/card/card.module.scss components/card/card.module.css
     sass styles/common.scss styles/common.css
+    sass styles/sizes.scss styles/sizes.css
     sass styles/colors.scss styles/colors.css
     sass styles/prompt.scss styles/prompt.css
 fi
