@@ -1,1 +1,1 @@
-stupid card game in react
+stupidity in react
