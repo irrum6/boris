@@ -10,7 +10,7 @@ const style = { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', }
 class CardBoard extends Component {
     render() {
         const cards = this.props.cards.map((card) => (
-            <Card key={card.id} clickf={this.props.clicker} cardid={card.id} showing={card.state !== CARD_STATES.HIDDING} color={card.color} />
+            <Card key={card.id} clickf={this.props.clicker} cardid={card.id} showing={card.state !== CARD_STATES.HIDDING} type={card.type} text={card.text}/>
         ));
         return (
             <div style={style}>

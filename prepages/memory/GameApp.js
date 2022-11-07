@@ -19,22 +19,30 @@ class App extends Component {
     super(props);
 
     let cards = [
-      { id: 0, state: hidding, color: 'bg_red' },
-      { id: 1, state: hidding, color: 'bg_red' },
-      { id: 2, state: hidding, color: 'bg_navy' },
-      { id: 3, state: hidding, color: 'bg_navy' },
-      { id: 4, state: hidding, color: 'bg_green' },
-      { id: 5, state: hidding, color: 'bg_green' },
-      { id: 6, state: hidding, color: 'bg_yellow' },
-      { id: 7, state: hidding, color: 'bg_yellow' },
-      { id: 8, state: hidding, color: 'bg_black' },
-      { id: 9, state: hidding, color: 'bg_black' },
-      { id: 10, state: hidding, color: 'bg_purple' },
-      { id: 11, state: hidding, color: 'bg_purple' },
-      { id: 12, state: hidding, color: 'bg_pink' },
-      { id: 13, state: hidding, color: 'bg_pink' },
-      { id: 14, state: hidding, color: 'bg_orange' },
-      { id: 15, state: hidding, color: 'bg_orange' }
+      { id: 0, state: hidding, type:"1"},
+      { id: 1, state: hidding, type: '1' },
+      { id: 2, state: hidding, type: '2' },
+      { id: 3, state: hidding, type: '2' },
+      { id: 4, state: hidding, type: '3' },
+      { id: 5, state: hidding, type: '3' },
+      { id: 6, state: hidding, type: '4' },
+      { id: 7, state: hidding, type: '4' },
+      { id: 8, state: hidding, type: '5' },
+      { id: 9, state: hidding, type: '5' },
+      { id: 10, state: hidding, type: '6' },
+      { id: 11, state: hidding, type: '6' },
+      { id: 12, state: hidding, type: '7' },
+      { id: 13, state: hidding, type: '7' },
+      { id: 14, state: hidding, type: '8' },
+      { id: 15, state: hidding, type: '8' },
+      { id: 16, state: hidding, type: '9' },
+      { id: 17, state: hidding, type: '9' },
+      { id: 18, state: hidding, type: '10' },
+      { id: 19, state: hidding, type: '10' },
+      { id: 20, state: hidding, type: '11' },
+      { id: 21, state: hidding, type: '11' },
+      { id: 22, state: hidding, type: '12' },
+      { id: 23, state: hidding, type: '12' }
     ];
     cards = Shuffle.array(cards);
     this.state = { cards, noClick: false }
@@ -71,7 +79,7 @@ class App extends Component {
     const showlena = showingCards.length;
 
     if (showlena === 2) {
-      if (showingCards[0].color === showingCards[1].color) {
+      if (showingCards[0].type === showingCards[1].type) {
         cards = mapState(cards, ids, matching);
       } else {
         let hiddingCards = mapState(cards, ids, hidding);
@@ -83,7 +91,7 @@ class App extends Component {
     this.setState({ cards, noClick });
   }
 
-  NewGame() {    
+  NewGame() {
     let cards = this.state.cards.map(c => ({
       ...c,
       state: CARD_STATES.HIDDING

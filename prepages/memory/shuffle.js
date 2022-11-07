@@ -7,7 +7,7 @@ class Shuffle {
         //do the shuffling
         //remove an from random location and insert at back
         //repeat 16 times
-        const times = 16;
+        const times = 24;
         let i = 0;
 
         let oa = [];//other array

@@ -7,4 +7,54 @@ div.card {
     transition-delay: 200ms;
     transition-duration: 300ms;
     transition-timing-function: ease-out;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+.type1 {
+    background: url("/images/memory/type1.svg");
+}
+
+.type2 {
+    background: url("/images/memory/type2.svg");
+}
+
+.type3 {
+    background: url("/images/memory/type3.svg");
+}
+
+.type4 {
+    background: url("/images/memory/type4.svg");
+}
+
+.type5 {
+    background: url("/images/memory/type5.svg");
+}
+
+.type6 {
+    background: url("/images/memory/type6.svg");
+}
+
+.type7 {
+    background: url("/images/memory/type7.svg");
+}
+
+.type8 {
+    background: url("/images/memory/type8.svg");
+}
+
+.type9 {
+    background: url("/images/memory/type9.svg");
+}
+
+.type10 {
+    background: url("/images/memory/type10.svg");
+}
+
+.type11 {
+    background: url("/images/memory/type11.svg");
+}
+
+.type12 {
+    background: url("/images/memory/type12.svg");
 }
