@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32.0px"
+   height="32.0px"
+   viewBox="0 0 32.0 32.0"
+   version="1.1"
+   id="SVGRoot"
+   sodipodi:docname="bracket.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1180"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="24.088664"
+     inkscape:cx="29.972604"
+     inkscape:cy="11.706751"
+     inkscape:window-width="1844"
+     inkscape:window-height="1011"
+     inkscape:window-x="76"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1186" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1175" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 16.964927,0.64960193 C 15.493024,0.69552582 14.959337,0.5187213 13.728357,0.77171387 12.310012,1.0332792 10.31164,2.9080066 10.102456,4.8655453 c -0.2124545,1.3740675 0.04208,4.321774 -0.04369,6.1689667 -0.2618425,1.790775 -0.7426375,2.80207 -2.3193865,3.690281 -3.006815,0.868214 -4.3432761,0.902293 -6.5563583,1.064146 2.0082995,2.217239 2.9677071,1.695891 7.0165781,2.05211 1.9328227,0.318211 1.4935496,2.556143 1.4810106,4.390833 -0.041096,1.081642 -0.1653815,2.260938 -0.1250083,3.340069 0.062727,1.676618 0.106564,3.360462 1.1973684,4.430487 1.001349,0.883783 2.80415,1.391585 6.174857,1.4232"
+       id="path1306"
+       sodipodi:nodetypes="ccccccccscc" />
+  </g>
+</svg>

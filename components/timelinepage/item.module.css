@@ -10,6 +10,10 @@
     border-right: 4px solid salmon;
     justify-self: start;
     justify-content: end;
+    background-image: url("/images/bracket2r.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: calc(100%);
 }
 
 .item_:nth-child(odd)>.content {
@@ -20,6 +24,9 @@
     border-left: 4px solid salmon;
     justify-self: end;
     justify-content: start;
+    background-image: url("/images/bracket2.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .item_:nth-child(even)>.content {
