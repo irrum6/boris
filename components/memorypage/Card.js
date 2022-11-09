@@ -3,7 +3,7 @@ import styles from './Card.module.css';
 
 const {card,...types} = styles;
 
-console.log(types);
+// console.log(types);
 
 const Card = (props) => {
     const hideClass = 'bg_darkgray';
