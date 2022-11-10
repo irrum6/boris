@@ -181,9 +181,12 @@ let timedata = [
 ];
 
 export default function timeline() {
-
-    return (<div className="container">
-        <div className='text-center bolder f4'>Commit Timeline:</div>
-        <Timeline data={timedata} />
-    </div>);
+    return (
+        <React.Fragment>
+            <div className='text-center bolder f4'>Commit Timeline:</div>
+            <div className="container">
+                <Timeline data={timedata} />
+            </div>
+        </React.Fragment>
+        );
 }
