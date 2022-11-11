@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Timeline from "../components/timelinepage/cont"
 
@@ -180,7 +180,10 @@ let timedata = [
     }
 ];
 
+const changeTitle = () => { document.title = `Commit Timeline`; }
+
 export default function timeline() {
+    useEffect(changeTitle);
     return (
         <React.Fragment>
             <div className='text-center bolder f4'>Commit Timeline:</div>
@@ -188,5 +191,5 @@ export default function timeline() {
                 <Timeline data={timedata} />
             </div>
         </React.Fragment>
-        );
+    );
 }

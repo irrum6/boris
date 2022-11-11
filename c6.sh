@@ -19,6 +19,10 @@ elif [ "$1" = 'rgb' ]; then
     sass styles/colors.scss styles/colors.css
 elif [ "$1" = 'sizes' ]; then
     sass styles/sizes.scss styles/sizes.css
+elif [ "$1" = 'prompt' ]; then
+    sass styles/prompt.scss styles/prompt.css
+elif [ "$1" = 'idx' ]; then
+    sass styles/index.scss styles/index.css
 else
     sass components/cardspage/navbar/navbar.module.scss components/cardspage/navbar/navbar.module.css
     sass components/cardspage/listwindow/listwindow.module.scss components/cardspage/listwindow/listwindow.module.css
@@ -27,7 +31,8 @@ else
     sass styles/common.scss styles/common.css
     sass styles/sizes.scss styles/sizes.css
     sass styles/colors.scss styles/colors.css
-    # sass styles/prompt.scss styles/prompt.css
+    sass styles/prompt.scss styles/prompt.css
+    sass styles/index.scss styles/index.css
 fi
 dd=$(date +%H:%M:%S);
 echo "compiled $dd";
