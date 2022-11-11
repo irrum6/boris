@@ -5,8 +5,8 @@
    viewBox="0 0 120.1 160.10001"
    version="1.1"
    id="svg8"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    sodipodi:docname="card_clubs_back.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -14,30 +14,28 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <defs
-     id="defs2" />
   <sodipodi:namedview
-     id="base"
+     id="namedview17"
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
+     inkscape:showpageshadow="2"
      inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="1.01"
-     inkscape:cx="218.81188"
-     inkscape:cy="334.65347"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
-     inkscape:document-rotation="0"
      showgrid="false"
+     inkscape:zoom="0.98744485"
+     inkscape:cx="293.68729"
+     inkscape:cy="335.20859"
      inkscape:window-width="1844"
      inkscape:window-height="1011"
      inkscape:window-x="76"
      inkscape:window-y="32"
      inkscape:window-maximized="1"
-     inkscape:showpageshadow="2"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1" />
+     inkscape:current-layer="text18-36" />
+  <defs
+     id="defs2" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -46,13 +44,10 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-47.961833,-58.49792)">
     <rect
@@ -68,30 +63,27 @@
        x="52.552338"
        y="83.814255"
        id="text18"><tspan
-         sodipodi:role="line"
          id="tspan16"
          x="52.552338"
          y="83.814255"
          style="stroke-width:0.264583">♣</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:126.115px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:4.96512;stroke-dasharray:none;stroke-opacity:1"
-       x="50.984814"
-       y="183.64621"
+    <g
+       aria-label="♣"
+       transform="matrix(1.1864376,0,0,1.3241198,-20.317954,-36.289085)"
        id="text18-36"
-       transform="scale(1.009637,0.99045498)"><tspan
-         sodipodi:role="line"
-         id="tspan16-7"
-         x="50.984814"
-         y="183.64621"
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:4.96512;stroke-dasharray:none;stroke-opacity:1">♣</tspan></text>
+       style="font-size:128.684px;letter-spacing:0px;word-spacing:0px;fill:none;stroke:#000000;stroke-width:3.06111">
+      <path
+         style="color:#000000;fill:none;stroke:#000000;stroke-width:3.19134606;stroke-dasharray:none;stroke-opacity:1"
+         d="m 122.97464,96.682112 c 4.29521,5.325128 6.39236,10.790328 7.53446,15.862018 1.59067,7.06366 1.65783,13.0853 6.15209,14.42807 8.32998,1.8087 9.13055,9.20975 12.13989,15.28361 1.96367,4.42959 3.47137,10.67446 1.80201,16.04856 -2.88303,8.19437 -11.10333,12.66712 -18.57379,12.65462 -12.0048,-0.79384 6.71682,-18.31752 -14.08079,-9.23418 -7.96959,3.36556 -11.18893,8.58297 -20.411826,8.83066 -7.439607,0.0965 -18.35517,0.834 -23.775568,-3.64748 -5.561517,-5.07105 -6.679085,-10.76432 -6.679085,-14.96069 0.0267,-8.99168 5.606599,-15.84016 9.840129,-16.42224 4.853867,-1.07758 8.457889,-19.33551 8.278094,-24.8944 0.283385,-8.50091 11.2332,-13.65074 15.448636,-15.984369 6.26051,-2.58461 16.72531,-3.594922 22.32575,2.035821 z"
+         id="path1210"
+         sodipodi:nodetypes="cscccccccccccc" />
+    </g>
     <text
        xml:space="preserve"
        style="font-size:25.4px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
        x="141.82864"
        y="84.312111"
        id="text18-7"><tspan
-         sodipodi:role="line"
          id="tspan16-5"
          x="141.82864"
          y="84.312111"
@@ -102,7 +94,6 @@
        x="52.217613"
        y="210.64514"
        id="text18-3"><tspan
-         sodipodi:role="line"
          id="tspan16-56"
          x="52.217613"
          y="210.64514"
@@ -113,7 +104,6 @@
        x="141.05196"
        y="210.80681"
        id="text18-2"><tspan
-         sodipodi:role="line"
          id="tspan16-9"
          x="141.05196"
          y="210.80681"
