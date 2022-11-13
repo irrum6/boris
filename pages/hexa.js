@@ -4,32 +4,9 @@ import { AlertMessage, ShowAlertMessage, Prompter, ShowPrompt, ClosePrompt, } fr
 
 import { Navbar, Board, ListDisplay, showList } from "../components/cardhex/index"
 
-
 import { CARDS, values as SEQUENCE } from '../data/cardshex.js';
 
 import Utils from '../data/utils';
-
-
-
-function reduceMuhCards(state, action) {
-    const { type, value } = action;
-    switch (type) {
-        case "one":
-            return { ...state, id: "1" }
-            break;
-        case "two":
-            return { ...state, id: "2" }
-            break;
-        case "tre":
-            return { ...state, id: "3", tre: true }
-        case "vier":
-            return { ...state, id: "4", tre: false }
-        case "sare":
-            return saveRecord();
-        default:
-            return { ...state, id: "4" }
-    }
-}
 
 const getNewCards = () => Utils.shuffleArray(CARDS, 16).map(el => { return { ...el, show: false }; });
 
@@ -82,10 +59,9 @@ function NewGame(state) {
 }
 
 function answer(state, id) {
-    console.log(id);
-    console.log(state);
-    if (state.gameOver) return state;
-
+    if (state.gameOver) {
+        return GameOver(state);
+    };
     let { prevIndex, currIndex, cards, answers } = state;
     //compare previous card to current card
     const val1 = cards[prevIndex].value;
@@ -122,6 +98,9 @@ function NextRound(state) {
 function GameOver(state) {
     ShowAlertMessage('თამაში მორჩა !');
     ClosePrompt();
+    let { prevIndex, currIndex } = state;
+    state.cards[prevIndex].show = true;
+    state.cards[currIndex].show = true;
     return saveRecord(state);
 }
 function GameWon(state) {
@@ -167,22 +146,15 @@ function App() {
     }]
 
     const cards = getNewCards();
-    const [state2, dispatcher2] = useReducer(reduceMuhCards, {});
     const [state, dispatcher] = useReducer(reductor, { answers, cards });
 
 
     let [zero, second, third] = answers;
 
     const nu = dispatcher.bind(null, { type: "new" });
-    const records = dispatcher.bind(null,{type:"records"});
+    const records = dispatcher.bind(null, { type: "records" });
 
     return (<React.Fragment>
-        <button onClick={dispatcher2.bind(null, { type: "tre" })}>GELA 3</button>
-        <button onClick={dispatcher2.bind(null, { type: "vier" })}>ELA 4</button>
-        <button onClick={dispatcher2.bind(null, { type: "two" })}>LA 2</button>
-        <div>Gela</div>
-        <div>{state2.id}</div>
-        {state2.tre && (<div>{state.cards.length}</div>)}
         <Navbar score={state.score} onShowRecords={records} onNewGame={nu} />
         <Board data={state.cards} />
         <AlertMessage />
