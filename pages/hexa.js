@@ -62,6 +62,7 @@ function ShowRecords(state) {
         records = [];
     }
     showList(records);
+    return state;
 }
 
 function NewGame(state) {
@@ -90,7 +91,7 @@ function answer(state, id) {
     const val1 = cards[prevIndex].value;
     const val2 = cards[currIndex].value;
 
-    const resultId = doCompareCards(state,val1,val2);
+    const resultId = doCompareCards(state, val1, val2);
     state.gameOver = (resultId !== id);
 
     return NextRound(state)
@@ -142,7 +143,9 @@ function reductor(state, action) {
         case "new":
             return NewGame(state);
         case "ans":
-            return answer(state,value);
+            return answer(state, value);
+        case "records":
+            return ShowRecords(state);
         default:
             return { ...state, gameOver: false }
     }
@@ -171,6 +174,7 @@ function App() {
     let [zero, second, third] = answers;
 
     const nu = dispatcher.bind(null, { type: "new" });
+    const records = dispatcher.bind(null,{type:"records"});
 
     return (<React.Fragment>
         <button onClick={dispatcher2.bind(null, { type: "tre" })}>GELA 3</button>
@@ -179,11 +183,11 @@ function App() {
         <div>Gela</div>
         <div>{state2.id}</div>
         {state2.tre && (<div>{state.cards.length}</div>)}
-        <Navbar score={state.score} onShowRecords={ShowRecords} onNewGame={nu} />
+        <Navbar score={state.score} onShowRecords={records} onNewGame={nu} />
         <Board data={state.cards} />
         <AlertMessage />
         <Prompter YES={zero.title} yesVal={0} NO={second.title} noVal={1} other={third.title} otherVal={2}
-            onSetValue={(id)=>{dispatcher({type:"ans",value:id})}} />
+            onSetValue={(id) => { dispatcher({ type: "ans", value: id }) }} />
         <ListDisplay />
     </React.Fragment>)
 }
