@@ -25,4 +25,4 @@ const ShowAlertMessage = (msg) => {
 }
 export default alertMessage;
 
-export { ShowAlertMessage };
+export {alertMessage as AlertMessage, ShowAlertMessage };

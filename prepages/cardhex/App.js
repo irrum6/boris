@@ -5,12 +5,9 @@ import { AlertMessage, ShowAlertMessage, Prompter, ShowPrompt, ClosePrompt, } fr
 
 import { Navbar, Board, ListDisplay, showList } from "../../components/cardhex/index"
 
-import CARDS from '../../data/cardshex.js';
+import {CARDS, values as SEQUENCE } from '../../data/cardshex.js';
 
 import Utils from '../../data/utils';
-
-const SEQUENCE = ['1','2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E','F'];
-
 class CardsApp extends Component {
     constructor() {
         super();
@@ -80,6 +77,7 @@ class CardsApp extends Component {
     }
     GameWon() {
         ShowAlertMessage('თქვენ მოიგეთ');
+        ClosePrompt();
         this.SaveRecord();
     }
     GetNewCards() {

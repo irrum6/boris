@@ -75,18 +75,6 @@
          style="stroke-width:0.264583;fill:#ff3333;">♥</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:117.001px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:none;stroke:#000000;stroke-width:3.00000004;stroke-dasharray:none;stroke-opacity:1"
-       x="56.023373"
-       y="180.47267"
-       id="text18-36"
-       transform="scale(0.9980452,1.0019586)"><tspan
-         sodipodi:role="line"
-         id="tspan16-7"
-         x="56.023373"
-         y="180.47267"
-         style="fill:none;stroke:#000000;stroke-width:3.00000004;stroke-dasharray:none;stroke-opacity:1">♥</tspan></text>
-    <text
-       xml:space="preserve"
        style="font-size:25.4px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff3333;stroke-width:0.264583"
        x="139.61719"
        y="84.684593"
@@ -118,5 +106,28 @@
          x="139.92827"
          y="213.33333"
          style="fill:#ff3333;stroke-width:0.264583">♥</tspan></text>
+    <path
+       style="fill:#ffe0c0;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 63.704479,94.639474 c -6.094752,9.185546 -0.117179,37.339496 -0.08179,52.729986 0.03329,14.49838 0.05933,28.36218 0.02639,40.04043 13.886349,0.0702 29.248207,0.24022 42.020681,0.46566 0.11206,-13.06656 -19.228447,-16.99839 -19.364482,-32.73115 16.588022,0.28326 27.854492,-0.0816 45.412502,0.018 -0.89063,16.30912 -22.91844,19.88201 -23.00662,32.86604 12.51528,0.0772 32.11331,-0.61373 44.83664,-0.46973 0.0497,-6.7004 0.93235,-21.29451 1.85153,-39.61066 1.05095,-20.94177 2.23021,-48.484035 -1.95928,-53.161971 -9.3957,-9.739153 -29.62042,5.354501 -44.54569,5.381771 C 94.506853,99.954881 71.974314,84.626909 63.704479,94.639474 Z"
+       id="path1498"
+       sodipodi:nodetypes="csccccccsccc" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:3"
+       id="rect1432"
+       width="18.053526"
+       height="18.934999"
+       x="73.604744"
+       y="113.6796"
+       ry="9.026763"
+       rx="0" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:3"
+       id="rect1434"
+       width="21.117338"
+       height="20.479393"
+       x="122.55177"
+       y="117.59268"
+       ry="10.239697"
+       rx="10.558669" />
   </g>
 </svg>

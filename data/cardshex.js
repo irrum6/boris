@@ -36,3 +36,5 @@ for (const suit of suits) {
 }
 
 export default data;
+
+export {data as CARDS, values};
