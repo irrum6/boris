@@ -2,6 +2,11 @@ html {
     font-size: 16px;
 }
 
+body{
+    padding: 0;
+    margin: 0;
+}
+
 $rems: (
     "0": 0,
     "q": 0.25rem,

@@ -110,7 +110,6 @@ function GameWon(state) {
 }
 
 function reductor(state, action) {
-    console.log(state, action);
     const { type, value } = action;
     switch (type) {
         case "gameover":
