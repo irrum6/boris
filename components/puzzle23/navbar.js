@@ -26,11 +26,19 @@ const PlayPause = styled.button`
     background-color:#333;
     color:white;
     border:4px solid #663;
+    margin-left:0.5rem;
     :hover{
         border:4px solid white;
     }
 `
-
+const ShowRecords = styled.button`
+    background-color:#333;
+    color:white;
+    border:4px solid #636;    
+    :hover{
+        border:4px solid white;
+    }
+`
 class Navbar extends Component {
     render() {
         let { props } = this;
@@ -39,6 +47,7 @@ class Navbar extends Component {
             <div className='ph'>
                 <span className="ph f2">Time:<span>{props.time}</span></span>
                 <span className="ph f2">Moves:<span>{props.moves}</span></span>
+                <ShowRecords className="ph f2 bolder borah" onClick={props.onShowRecords}>Records</ShowRecords>
                 <PlayPause className="ph f2 bolder borah">Pause</PlayPause>
                 <NewGamer className="ph f2 bolder borah" onClick={props.onNewGame} >New Game</NewGamer>
 

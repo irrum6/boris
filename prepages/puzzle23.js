@@ -22,6 +22,7 @@ function initial_state(n) {
     //and return
     return {
         paused: false,
+        gameOver: false,
         records: [],
         numbers,
         time: 0,
@@ -33,6 +34,7 @@ function new_game(state) {
     let time = 0;
     let moves = 0;
     let paused = false;
+    let gameOver = false;
     let numbers = get_shuffled(state.numbers)
     let n = 16;
     let len = numbers.length;
@@ -47,6 +49,7 @@ function new_game(state) {
     return {
         ...state,
         paused,
+        gameOver,
         numbers,
         time,
         moves
@@ -55,8 +58,8 @@ function new_game(state) {
 
 function get_shuffled(numbers) {
     // shuffle a few times
-    let n = 16;
     let len = numbers.length;
+    let n = len - 1;
     for (let i = 0; i < n; i++) {
         let index1 = Math.floor(Math.random() * len);
         let index2 = Math.floor(Math.random() * len);
@@ -67,7 +70,40 @@ function get_shuffled(numbers) {
     }
     return numbers;
 }
+
+function check_game_over(numbers) {
+
+    for (let i = 0, len = numbers.length; i < len; i++) {
+        const num = numbers[i];
+        if (i !== num.index) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function game_over(state) {
+    alert("You won");
+    return save_record(state);
+}
+function save_record(state) {
+    let { records, moves } = state;
+
+    if (records === undefined) {
+        records = [];
+    }
+    let len = state.numbers.length;
+    const date = new Date();
+
+    records.push({ date, moves, len });
+
+    return { ...state, records }
+}
+
 function mover(state, i) {
+    if (state.gameOver) {
+        return game_over(state);;
+    }
     let { numbers, moves } = state;
     console.log(state);
     // move up -> index -5
@@ -101,9 +137,9 @@ function mover(state, i) {
         numbers[i] = { ...tmp };
         //what?
         state.moves++;
+        state.gameOver = check_game_over(numbers);
         return { ...state, numbers };
     }
-    console.log(1)
     return state;
 }
 
