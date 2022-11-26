@@ -68,75 +68,75 @@ function get_shuffled(numbers) {
     return numbers;
 }
 function mover(state, i) {
-    // console.log(state, i);
-    // move up
-    // index -5
-    // move down
-    // index +5
-    // left 
-    // index -1
-    // right
-    // index +1
     let { numbers, moves } = state;
+    console.log(state);
+    // move up -> index -5
+    // move down -> index +5
+    // move left -> index -1
+    // move right -> index +1    
     let up = i - 5;
     let down = i + 5;
     let left = i - 1;
     let right = i + 1;
     let len = numbers.length;
 
-    if (up > -1 && numbers[up].value == -2) {
-        let tmp = { ...numbers[up] };
-        numbers[up] = { ...numbers[i] };
-        numbers[i] = { ...tmp };
-        moves += 1;
-        return { ...state, numbers, moves };
+    let selectedIndex = null;
+    const EMPTY_CELL_VALUE = -2;
+
+    if (up > -1 && numbers[up].value == EMPTY_CELL_VALUE) {
+        selectedIndex = up;
     }
-    if (down < len && numbers[down].value == -2) {
-        let tmp = { ...numbers[down] };
-        numbers[down] = { ...numbers[i] };
-        numbers[i] = { ...tmp };
-        moves += 1;
-        return { ...state, numbers, moves };
+    if (down < len && numbers[down].value == EMPTY_CELL_VALUE) {
+        selectedIndex = down;
     }
-    if (left > -1 && numbers[left].value == -2) {
-        let tmp = { ...numbers[left] };
-        numbers[left] = { ...numbers[i] };
-        numbers[i] = { ...tmp };
-        moves += 1;
-        console.log(moves);
-        return { ...state, numbers, moves };
+    if (left > -1 && numbers[left].value == EMPTY_CELL_VALUE) {
+        selectedIndex = left;
     }
-    if (right < len && numbers[right].value == -2) {
-        let tmp = { ...numbers[right] };
-        numbers[right] = { ...numbers[i] };
-        numbers[i] = { ...tmp };
-        moves += 1;
-        return { ...state, numbers, moves };
+    if (right < len && numbers[right].value == EMPTY_CELL_VALUE) {
+        selectedIndex = right;
     }
-    return { ...state };
+    if (Number.isInteger(selectedIndex)) {
+        let tmp = { ...numbers[selectedIndex] };
+        numbers[selectedIndex] = { ...numbers[i] };
+        numbers[i] = { ...tmp };
+        //what?
+        state.moves++;
+        return { ...state, numbers };
+    }
+    console.log(1)
+    return state;
 }
 
 function reductor(state, action, next) {
     const { type, value } = action;
+    let newState = { ...state };
     switch (type) {
         case "reset":
-            return { ...state, ...initial_state() }
+            newState = initial_state();
+            break;
         case "gameover":
-            return { ...state, gameOver: true }
+            newState = { ...state, gameOver: true }
+            break;
         case "gameOn":
-            return { ...state, gameOver: false }
+            newState = { ...state, gameOver: false }
+            break;
         case "save":
+            break;
         case "new":
-            return new_game(state)
+            newState = new_game(state);
+            break;
         case "move":
-            console.log(state, action, next)
-            return mover(state, value)
+            newState = mover(state, value);
+            break;
         case "records":
         case "pause":
         case "resume":
+            break;
         default:
-            return { ...state, gameOver: false }
+            newState = { ...state, gameOver: false }
     }
+    console.log(newState);
+    return newState;
 }
 
 export default reductor;
