@@ -13,22 +13,21 @@ const Button = styled.button`
     margin:0;
     border: none; 
     cursor: pointer;
+    @media (max-width: 450px) {
+        font-size:1.25rem;
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        padding: 0.125rem;
+        margin:0;
+    }
 `;
 
+// default 25 tile grid 
 const Cell = styled.div`
     padding:0;
     margin:0;
-    width:160px;
-    height:160px;
     border-radius:4px;
-
-    @media (max-width: 576px) {
-        width:100px;
-        height:100px;
-    }
 `
-
-
 
 const EmptyCell = (props) => (
     <Cell>
@@ -36,25 +35,20 @@ const EmptyCell = (props) => (
     </Cell>
 );
 
-const NumberCell = ({ number, clicker, indexInArray, selfIndex }) => {
+const NumberCell = ({ number, clicker, clicker2, indexInArray, selfIndex }) => {
     if (indexInArray == selfIndex) {
         const btnStyle = {
             color: 'black',
             backgroundColor: 'white',
             border: "4px solid orange"
         };
-        const divStyle = {
-           
-        }
-        return (
-            <Cell style={divStyle}>
-                <Button style={btnStyle} onClick={clicker}>[{number}]</Button>
-            </Cell>
-        );
+        return (<Cell>
+            <Button style={btnStyle} onClick={clicker} onDoubleClick={clicker2}>[{number}]</Button>
+        </Cell>);
     }
     return (
         <Cell>
-            <Button onClick={clicker}>{number}</Button>
+            <Button onClick={clicker} onAuxClick={console.log(123)}>{number}</Button>
         </Cell>
     );
 }
