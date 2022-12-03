@@ -36,19 +36,21 @@ const EmptyCell = (props) => (
 );
 
 const NumberCell = ({ number, clicker, clicker2, indexInArray, selfIndex }) => {
+    let numberToString = number <10 ? `0${number}`:`${number}`;
     if (indexInArray == selfIndex) {
         const btnStyle = {
             color: 'black',
             backgroundColor: 'white',
-            border: "4px solid orange"
+            border: "4px solid orange",
+            textDecoration:"overline"
         };
         return (<Cell>
-            <Button style={btnStyle} onClick={clicker} onDoubleClick={clicker2}>[{number}]</Button>
+            <Button style={btnStyle} onClick={clicker} onDoubleClick={clicker2}>{numberToString}</Button>
         </Cell>);
     }
     return (
         <Cell>
-            <Button onClick={clicker} onAuxClick={console.log(123)}>{number}</Button>
+            <Button onClick={clicker} onAuxClick={console.log(123)}>{numberToString}</Button>
         </Cell>
     );
 }
