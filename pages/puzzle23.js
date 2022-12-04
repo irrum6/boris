@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react'
+import React, { useReducer, useEffect } from 'react'
 
 import { Container, Navbar, ListWindow, showList } from "../components/puzzle23"
 
@@ -17,6 +17,7 @@ function App() {
 }
 
 export default function puzzle() {
+    useEffect(() => { document.title = `24-tile puzzle`; })
     return (
         <div className="container">
             <App />
