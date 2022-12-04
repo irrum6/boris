@@ -4,7 +4,7 @@ import styled, { css } from "styled-components"
 const Button = styled.button`
     width:calc(100% - 8px);
     height:calc(100% - 8px);
-    background-color: black;
+    background:linear-gradient(black,#443838);
     color: white;
     font-weight: 900;
     font-size:3.5rem;
@@ -40,8 +40,8 @@ const NumberCell = ({ number, clicker, clicker2, indexInArray, selfIndex }) => {
     if (indexInArray == selfIndex) {
         const btnStyle = {
             color: 'black',
-            backgroundColor: 'white',
-            border: "4px solid orange",
+            background: 'linear-gradient(white,#889595)',
+            border: "2px solid orange",
             textDecoration:"overline"
         };
         return (<Cell>
