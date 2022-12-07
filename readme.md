@@ -1,1 +1,1 @@
-stupidity in react
+A few small games implemented in react
