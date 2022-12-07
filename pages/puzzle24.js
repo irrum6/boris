@@ -2,6 +2,7 @@ import React, { useReducer, useEffect } from 'react'
 
 import { Container, Navbar, ListWindow, showList } from "../components/puzzle23"
 
+import {AlertMessage} from "../components/common/alert/index"
 import reductor, { initial_state } from '../prepages/puzzle23';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
             fn2={(ind) => dispatcher({ type: "move", value: ind, dbl: true })}
             modefn={(mode) => dispatcher({ type: "mode", value: mode })}></Container>
         <ListWindow list={state.records}></ListWindow>
+        <AlertMessage></AlertMessage>
     </React.Fragment>);
 }
 

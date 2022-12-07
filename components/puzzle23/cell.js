@@ -50,7 +50,7 @@ const NumberCell = ({ number, clicker, clicker2, indexInArray, selfIndex }) => {
     }
     return (
         <Cell>
-            <Button onClick={clicker} onAuxClick={console.log(123)}>{numberToString}</Button>
+            <Button onClick={clicker}>{numberToString}</Button>
         </Cell>
     );
 }

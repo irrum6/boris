@@ -1,15 +1,18 @@
-const TILE14 = 15;
-const TILE23 = 24;
-const TILE34 = 35;
-const TILE47 = 48;
-const MODES = { TILE14, TILE23, TILE34, TILE47 }
+const TILE15 = 15;
+const TILE24 = 24;
+const TILE35 = 35;
+const TILE48 = 48;
+const MODES = { TILE15, TILE24, TILE35, TILE48 }
 const SIDES = {
-    [TILE14]: 4,
-    [TILE23]: 5,
-    [TILE34]: 6,
-    [TILE47]: 7,
+    [TILE15]: 4,
+    [TILE24]: 5,
+    [TILE35]: 6,
+    [TILE48]: 7,
 }
 
+import { ShowAlertMessage } from "../components/common/alert/index"
+
+const EMPTY_CELL_VALUE = -2;
 /**
  * @param {Integer} n 
  * @returns 
@@ -22,7 +25,7 @@ function get_initial_numbers(n, mode) {
             value: i + 1,
             index: i
         } : {
-            value: -2,
+            value: EMPTY_CELL_VALUE,
             index: i
         }
         numbers.push(item);
@@ -31,8 +34,9 @@ function get_initial_numbers(n, mode) {
 }
 
 function initial_state() {
-    let numbers = get_initial_numbers(25, MODES.TILE23);
-
+    let initialMode = MODES.TILE24;
+    let numbers = get_initial_numbers(25, initialMode);
+    let side = SIDES[initialMode];
     return {
         paused: false,
         gameOver: false,
@@ -40,7 +44,44 @@ function initial_state() {
         numbers,
         time: 0,
         moves: 0,
-        mode: MODES.TILE23
+        mode: initialMode,
+        side
+    }
+}
+
+function is_solvable(numbers, mode) {
+    //adopted from
+    // https://developerslogblog.wordpress.com/2020/04/01/how-to-shuffle-an-slide-puzzle/
+    
+    // count inversion
+    let inversionCount = 0;
+    let side = SIDES[mode];
+    let emptyCellRow = 0;
+
+    let len = numbers.length;
+    for (let i = 0; i < len - 1; i++) {
+        let num = numbers[i].value;
+        if (num == EMPTY_CELL_VALUE) {
+            //thank for not having int
+            emptyCellRow = Math.floor(i / side) + 1;
+            continue;
+        }
+        for (let j = i + 1; j < len - 1; j++) {
+            let num2 = numbers[j].value;
+            if (num > num2) {
+                inversionCount++;
+            }
+        }
+    }
+    console.log(side, inversionCount, emptyCellRow);
+    if (side % 2 == 1) {
+        return (inversionCount % 2 == 0);
+    }
+    if (emptyCellRow % 2 == 0) {
+        return (inversionCount % 2 == 1);
+    }
+    if (emptyCellRow % 2 == 1) {
+        return (inversionCount % 2 == 0);
     }
 }
 
@@ -49,7 +90,23 @@ function new_game(state) {
     let moves = 0;
     let paused = false;
     let gameOver = false;
-    let numbers = get_shuffled(state.numbers, state.mode)
+    let side = SIDES[state.mode]
+    let totalTiles = side * side;
+    let nuNumbers = get_initial_numbers(totalTiles, state.mode);
+    let numbers = get_shuffled(nuNumbers, state.mode);
+
+    // let count = 0;
+    while (!is_solvable(numbers, state.mode)) {
+        // console.log("unsol");
+        // break;
+        numbers = get_shuffled(nuNumbers, state.mode);
+        // count++;
+        // console.log(numbers);
+        // //give up after 100 tries
+        // if (count > 100) {
+        //     break;
+        // }
+    }
     return {
         ...state,
         paused,
@@ -60,9 +117,13 @@ function new_game(state) {
     }
 }
 
+
+
 function get_shuffled(numbers, mode) {
     // shuffle a few times
     let len = numbers.length;
+    let side = SIDES[mode];
+
     for (let i = 0; i < mode; i++) {
         let index1 = Math.floor(Math.random() * len);
         let index2 = Math.floor(Math.random() * len);
@@ -86,7 +147,7 @@ function check_game_over(numbers) {
 }
 
 function game_over(state) {
-    alert("You won");
+    ShowAlertMessage("You won");
     return save_record(state);
 }
 function save_record(state) {
@@ -109,7 +170,7 @@ function mover(state, i, dbl) {
     }
     let { numbers, moves, mode } = state;
     let side = SIDES[mode];
-    console.log(state);
+    // console.log(state);
     // move up -> index -side
     // move down -> index + side
     // move left -> index -1
@@ -121,7 +182,6 @@ function mover(state, i, dbl) {
     let len = numbers.length;
 
     let selectedIndex = null;
-    const EMPTY_CELL_VALUE = -2;
 
     // debugger;
     //two cells empty create two moves
@@ -160,7 +220,7 @@ function mover(state, i, dbl) {
 }
 
 function switch_mode(state, mode) {
-    if (!(mode === MODES.TILE14 || mode === MODES.TILE23 || mode === MODES.TILE34 || mode === MODES.TILE47)) {
+    if (!(mode === MODES.TILE15 || mode === MODES.TILE24 || mode === MODES.TILE35 || mode === MODES.TILE48)) {
         return state;
     }
 
@@ -199,7 +259,7 @@ function reductor(state, action, next) {
         default:
             newState = { ...state, gameOver: false }
     }
-    console.log(newState);
+    // console.log(newState);
     return newState;
 }
 

@@ -40,8 +40,6 @@ export default ({ numbers, fn, fn2 }) => {
     let lena = numbers.length;
     let ncells = numbers.map(numbToCell.bind(null, fn, fn2));
 
-    console.log(lena);
-
     if (lena == 16) {
         return (
             <Board16>
