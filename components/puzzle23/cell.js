@@ -9,6 +9,7 @@ const Button = styled.button`
     font-weight: 900;
     font-size:3.5rem;
     word-spacing: 0.25rem;
+    user-select: none;
     padding: 0.25rem;
     margin:0;
     border: none; 
