@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const windowId = "msgWindow";
 
-import DW, { Show, Close } from '../dragwindow'
+import DW, { Show, Close } from './dragwindow'
 
 const ShowSelf = () => Show(windowId);
 const CloseSelf = () => Close(windowId);

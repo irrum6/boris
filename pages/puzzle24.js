@@ -2,7 +2,7 @@ import React, { useReducer, useEffect } from 'react'
 
 import { Container, Navbar, ListWindow, showList } from "../components/puzzle23"
 
-import {AlertMessage} from "../components/common/alert/index"
+import {AlertMessage} from "../components/index"
 import reductor, { initial_state } from '../prepages/puzzle23';
 
 function App() {

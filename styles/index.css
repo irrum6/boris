@@ -98,12 +98,24 @@ div.override-none {
   color: #80ff40;
 }
 
+.color_green2 {
+  color: #80b040;
+}
+
 .color_blue {
   color: #4080ff;
 }
 
+.color_blue2 {
+  color: #4080b0;
+}
+
 .color_violet {
   color: #f040f0;
+}
+
+.color_violet2 {
+  color: #b04080;
 }
 
 .color_black {
@@ -179,11 +191,11 @@ div.override-none {
 }
 
 .color_purple {
-  color: #3000ff;
+  color: #f0f;
 }
 
 .color_pink {
-  color: #f030f0;
+  color: #f69;
 }
 
 .color_lightskyblue {
@@ -206,12 +218,24 @@ div.override-none {
   background-color: #80ff40;
 }
 
+.bg_green2 {
+  background-color: #80b040;
+}
+
 .bg_blue {
   background-color: #4080ff;
 }
 
+.bg_blue2 {
+  background-color: #4080b0;
+}
+
 .bg_violet {
   background-color: #f040f0;
+}
+
+.bg_violet2 {
+  background-color: #b04080;
 }
 
 .bg_black {
@@ -287,11 +311,11 @@ div.override-none {
 }
 
 .bg_purple {
-  background-color: #3000ff;
+  background-color: #f0f;
 }
 
 .bg_pink {
-  background-color: #f030f0;
+  background-color: #f69;
 }
 
 .bg_lightskyblue {
@@ -314,12 +338,24 @@ div.override-none {
   border-color: #80ff40;
 }
 
+.bo_green2 {
+  border-color: #80b040;
+}
+
 .bo_blue {
   border-color: #4080ff;
 }
 
+.bo_blue2 {
+  border-color: #4080b0;
+}
+
 .bo_violet {
   border-color: #f040f0;
+}
+
+.bo_violet2 {
+  border-color: #b04080;
 }
 
 .bo_black {
@@ -395,11 +431,11 @@ div.override-none {
 }
 
 .bo_purple {
-  border-color: #3000ff;
+  border-color: #f0f;
 }
 
 .bo_pink {
-  border-color: #f030f0;
+  border-color: #f69;
 }
 
 .bo_lightskyblue {
@@ -1518,36 +1554,12 @@ button.choice {
   cursor: pointer;
 }
 
-button.close {
-  padding: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-  margin-left: 0.5rem;
-  font-size: 5vmin;
-  font-weight: 900;
-  border: 0;
-  border-radius: 10%;
-  color: black;
-  cursor: pointer;
-}
-
 @media screen and (max-aspect-ratio: 1/1) {
   div.prompt {
     top: 40vh;
     left: 10vmin;
     top: 30vh;
   }
-}
-.close-green {
-  background-color: #80b040;
-}
-
-.close-blue {
-  background-color: #4080b0;
-}
-
-.close-red {
-  background-color: #b04080;
 }
 
 /*# sourceMappingURL=index.css.map */

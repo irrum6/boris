@@ -10,7 +10,7 @@ const SIDES = {
     [TILE48]: 7,
 }
 
-import { ShowAlertMessage } from "../components/common/alert/index"
+import { ShowAlertMessage } from "../components/index"
 
 const EMPTY_CELL_VALUE = -2;
 /**

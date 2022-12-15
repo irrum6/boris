@@ -35,35 +35,10 @@ button.choice {
   cursor: pointer;
 }
 
-button.close {
-  padding: 0;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-  margin-left: 0.5rem;
-  font-size: 5vmin;
-  font-weight: 900;
-  border: 0;
-  border-radius: 10%;
-  color: black;
-  cursor: pointer;
-}
-
 @media screen and (max-aspect-ratio: 1/1) {
   div.prompt {
     top: 40vh;
     left: 10vmin;
     top: 30vh;
   }
-}
-
-.close-green {
-  background-color: #80b040;
-}
-
-.close-blue {
-  background-color: #4080b0;
-}
-
-.close-red {
-  background-color: #b04080;
 }

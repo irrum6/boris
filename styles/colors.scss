@@ -1,10 +1,12 @@
-$colors :(
-    "_memred":#f03030,
+$colors :("_memred":#f03030,
     "_red":#ff4040,
     "_memgreen" : #308030,
     "_green":#80ff40,
+    "_green2":#80b040,
     "_blue":#4080ff,
+    "_blue2":#4080b0,
     "_violet":#f040f0,
+    "_violet2":#b04080,
     "_black":black,
     "_white":white,
     "_litegray":#808080,
@@ -23,26 +25,27 @@ $colors :(
     "_memgrey" : #303030,
     "_yellow" : #f0f030,
     "_orange":#b63,
-    "_purple" : #3000ff,
-    "_pink" : #f030f0,
-    "_lightskyblue" : #80e0ff
-);
+    "_purple" : #f0f,
+    "_pink" : #f69,
+    "_lightskyblue" : #80e0ff);
 
-@each $k,$v in $colors{
-    .color#{$k}{
-        color:$v
+@each $k,
+$v in $colors {
+    .color#{$k} {
+        color: $v
     }
 }
 
-@each $k,$v in $colors{
-    .bg#{$k}{
-        background-color:$v
+@each $k,
+$v in $colors {
+    .bg#{$k} {
+        background-color: $v
     }
 }
 
-@each $k,$v in $colors{
-    .bo#{$k}{
+@each $k,
+$v in $colors {
+    .bo#{$k} {
         border-color: $v;
     }
 }
-

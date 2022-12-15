@@ -72,30 +72,31 @@ export default function Home() {
     return (
         <div>
             <div className="flex stretch bg_darkgray myh pxq pyh">
-                <button className="f3 bolder bg-blend zero-border pointer" onClick={set_rgb_true}>
-                    <span className="bg_red pxh">R</span>
-                    <span className="bg_green pxh">G</span>
-                    <span className="bg_blue pxh">B</span>
-                </button>
-                <button className="f3 bolder color_white bg-blend zero-border pointer" onClick={set_rgb_false}>
-                    <span className="bg_black color_white pxh">B</span>
-                    <span className="bg_white color_black pxh">&amp;</span>
-                    <span className="bg_black color_white pxh">W</span>
-                </button>
                 <button className="f3 bolder borah mxq bg_darkgray  pointer">
                     <a href="/cards" className="no-decor color_white"><span>CARDS</span></a>
                 </button>
                 <button className="f3 bolder borah mxq bg_white pointer">
                     <a href="/memory" className="no-decor color_black"><span>MEMORY</span></a>
                 </button>
+                <button className="f3 bolder borah mxq bg_darkgray  pointer">
+                    <a href="/p24" className="no-decor color_white"><span>Puzzle 24</span></a>
+                </button>
+            </div>
+            <div className="flex stretch bg_white my0 pxq pyh">
+                <button className="f3 bolder bg-blend zero-border pointer" onClick={set_rgb_true}>
+                    <span className="bg_red pxh">R</span>
+                    <span className="bg_green pxh">G</span>
+                    <span className="bg_blue pxh">B</span>
+                </button>
+            </div>
+            <div className="flex stretch bg_white my0 pxq pyh">
+                <button className="f3 bolder color_white bg_black zero-border pointer" onClick={set_rgb_false}>
+                    <span className="bg_black color_white pxh">B</span>
+                    <span className="bg_white color_black pxh">&amp;</span>
+                    <span className="bg_black color_white pxh">W</span>
+                </button>
             </div>
             <DisplayDate rgb="0" />
-            {/* <div>
-                <a href="cards" className="color_black pointer mb1 f1h bolder">&gt;&gt;Play some cards game.</a>
-            </div>
-            <div>
-                <a href="memory" className="color_black pointer mb1 f1h bolder">&gt;&gt;Play memory game.</a>
-            </div> */}
         </div>
     )
 }
