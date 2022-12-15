@@ -1561,5 +1561,56 @@ button.choice {
     top: 30vh;
   }
 }
+.clubs_2 {
+  background: url("/images/cards/clubs_2.svg");
+}
+
+.clubs_3 {
+  background: url("/images/cards/clubs_3.svg");
+}
+
+.clubs_4 {
+  background: url("/images/cards/clubs_4.svg");
+}
+
+.clubs_5 {
+  background: url("/images/cards/clubs_5.svg");
+}
+
+.clubs_6 {
+  background: url("/images/cards/clubs_6.svg");
+}
+
+.clubs_7 {
+  background: url("/images/cards/clubs_7.svg");
+}
+
+.clubs_8 {
+  background: url("/images/cards/clubs_8.svg");
+}
+
+.clubs_9 {
+  background: url("/images/cards/clubs_9.svg");
+}
+
+.clubs_10 {
+  background: url("/images/cards/clubs_10.svg");
+}
+
+.clubs_J {
+  background: url("/images/cards/clubs_jack.svg");
+}
+
+.clubs_Q {
+  background: url("/images/cards/clubs_queen.svg");
+}
+
+.clubs_K {
+  background: url("/images/cards/clubs_king.svg");
+}
+
+.clubs_A {
+  background: url("/images/cards/clubs_ace.svg");
+}
 
 /*# sourceMappingURL=index.css.map */
