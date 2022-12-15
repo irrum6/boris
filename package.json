@@ -1,6 +1,6 @@
 {
   "name": "boris",
-  "version": "0.7.10",
+  "version": "0.7.11",
   "description": "some small games in react and next js",
   "main": "index.js",
   "scripts": {
