@@ -19,4 +19,8 @@ $v in $colors {
         $x : "/images/cards/clubs_" +$v+".svg";
         background: url($x);
     }
+    .spades_#{$k} {
+        $x : "/images/cards/spades_" +$v+".svg";
+        background: url($x);
+    }
 }

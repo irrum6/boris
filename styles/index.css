@@ -1601,52 +1601,104 @@ button.choice {
   background: url("/images/cards/clubs_2.svg");
 }
 
+.spades_2 {
+  background: url("/images/cards/spades_2.svg");
+}
+
 .clubs_3 {
   background: url("/images/cards/clubs_3.svg");
+}
+
+.spades_3 {
+  background: url("/images/cards/spades_3.svg");
 }
 
 .clubs_4 {
   background: url("/images/cards/clubs_4.svg");
 }
 
+.spades_4 {
+  background: url("/images/cards/spades_4.svg");
+}
+
 .clubs_5 {
   background: url("/images/cards/clubs_5.svg");
+}
+
+.spades_5 {
+  background: url("/images/cards/spades_5.svg");
 }
 
 .clubs_6 {
   background: url("/images/cards/clubs_6.svg");
 }
 
+.spades_6 {
+  background: url("/images/cards/spades_6.svg");
+}
+
 .clubs_7 {
   background: url("/images/cards/clubs_7.svg");
+}
+
+.spades_7 {
+  background: url("/images/cards/spades_7.svg");
 }
 
 .clubs_8 {
   background: url("/images/cards/clubs_8.svg");
 }
 
+.spades_8 {
+  background: url("/images/cards/spades_8.svg");
+}
+
 .clubs_9 {
   background: url("/images/cards/clubs_9.svg");
+}
+
+.spades_9 {
+  background: url("/images/cards/spades_9.svg");
 }
 
 .clubs_10 {
   background: url("/images/cards/clubs_10.svg");
 }
 
+.spades_10 {
+  background: url("/images/cards/spades_10.svg");
+}
+
 .clubs_J {
   background: url("/images/cards/clubs_jack.svg");
+}
+
+.spades_J {
+  background: url("/images/cards/spades_jack.svg");
 }
 
 .clubs_Q {
   background: url("/images/cards/clubs_queen.svg");
 }
 
+.spades_Q {
+  background: url("/images/cards/spades_queen.svg");
+}
+
 .clubs_K {
   background: url("/images/cards/clubs_king.svg");
 }
 
+.spades_K {
+  background: url("/images/cards/spades_king.svg");
+}
+
 .clubs_A {
   background: url("/images/cards/clubs_ace.svg");
+}
+
+.spades_A {
+  background: url("/images/cards/spades_ace.svg");
 }
 
 /*# sourceMappingURL=index.css.map */
