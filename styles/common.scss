@@ -72,3 +72,13 @@ div.override-none{
 .bo-solid {
   border-style: solid;
 }
+
+.blend_pointer {
+  background-color: transparent;
+  color: white;
+  font-weight: 600;
+  word-spacing: 0.25rem;
+  padding: 0.3rem;
+  border: none;
+  cursor: pointer;
+}

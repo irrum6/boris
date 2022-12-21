@@ -14,6 +14,11 @@ module.exports = {
         destination: '/puzzle24',
         permanent: true,
       },
+      {
+        source: '/hex',
+        destination: '/cardhex',
+        permanent: true,
+      }
     ]
   },
 }

@@ -1,15 +1,16 @@
-import React from 'react';
-import styles from './navbar.module.css'
+import React from 'react'
+
+import Navi from "../../common/navi"
 
 const Navbar = (props) => {
     const scoreKeeper = props.score ? `ქულა:${props.score}` : ''
     return (
-        <div className={`${styles.navbar} flex`}>
-            <a className ="color_white bolder" href="/">&lt;&lt; უკან</a>
-            <span className={styles.blend}> {scoreKeeper}</span>
-            <button className={`${styles["blend"]} bg_blend_green`}  onClick={props.onNewGame}>ახალი თამაში</button>
-            <button className={styles["blend"]} onClick={props.onShowRecords}>რეკორდები</button>
-        </div>
+        <Navi className="flex">
+            <a className="color_white bolder f1q" href="/">&lt;&lt; უკან</a>
+            <span className="blend_pointer f1q"> {scoreKeeper}</span>
+            <button className={`blend_pointer f1q bg_blend_green`} onClick={props.onNewGame}>ახალი თამაში</button>
+            <button className="blend_pointer  f1q" onClick={props.onShowRecords}>რეკორდები</button>
+        </Navi>
     );
 }
 
