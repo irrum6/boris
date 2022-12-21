@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
+import styled from "styled-components"
 
 import TimelineItem from "./item";
 
-import styles from "./cont.module.css"
-
-const { container_ } = styles;
-
+const Container = styled.div`
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+`
 class Timeline extends Component {
     render() {
         let times = this.props.data.map((item, index) => (
             <TimelineItem key={index} data={{ ...item }} />
         ));
         return (
-            <div className={container_}>
+            <Container>
                 {times}
-            </div>
+            </Container>
         );
     }
 }
