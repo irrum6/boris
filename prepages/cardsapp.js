@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 
-import { AlertMessage, ShowAlertMessage, Prompter, ShowPrompt, ClosePrompt, } from "../../components/"
+import { AlertMessage, ShowAlertMessage, Prompter, ShowPrompt, ClosePrompt, } from "../components"
 
-import { Navbar, Board, ListDisplay, showList } from "../../components/cardspage/index"
+import { Navbar, Board, ListDisplay, showList } from "../components/cardspage/index"
 
-import CARDS from '../../data/cards.json';
+import CARDS from '../data/cards.json';
 
-import Utils from '../../data/utils';
+import Utils from '../data/utils';
 
 const SEQUENCE = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
 

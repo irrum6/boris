@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 
-import { AlertMessage, ShowAlertMessage, Prompter, ShowPrompt, ClosePrompt, } from "../../components"
+import { AlertMessage, ShowAlertMessage, Prompter, ShowPrompt, ClosePrompt, } from "../components"
 
-import { Navbar, Board, ListDisplay, showList } from "../../components/cardhex/index"
+import { Navbar, Board, ListDisplay, showList } from "../components/cardhex/index"
 
-import { CARDS, values as SEQUENCE } from '../../data/cardshex.js';
+import { CARDS, values as SEQUENCE } from '../data/cardshex.js';
 
-import Utils from '../../data/utils';
+import Utils from '../data/utils';
 class CardsApp extends Component {
     constructor() {
         super();
