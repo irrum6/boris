@@ -131,26 +131,19 @@ const ColoredButton = ({ text, color, bgcolor, fn }) => {
 
     let divCss = `flex ${bgcolor} stretch my0 pxq pyh flex centered`;
     return (<div className={divCss}>
-        <button className="f3 bolder bg-transparent bow0 pointer" onClick={() => fn()}>{spans}</button>
+        <button className="f3 bolder stretch bg-transparent bow0 pointer" onClick={() => fn()}>{spans}</button>
     </div>)
 }
 const SideBar = () => {
     return (<React.Fragment>
         <div className="flex stretch bg_black my0 pxq pyh flex centered">
-            <button className="f3 bolder bg-transparent bow0 pointer pxh" onClick={go_rgb}>
+            <button className="f3 bolder stretch bg-transparent bow0 pointer pxh" onClick={go_rgb}>
                 <span className="bg_red pxh">R</span>
                 <span className="bg_green pxh">G</span>
                 <span className="bg_blue pxh">B</span>
             </button>
         </div>
-        <div className="flex stretch bg_violet2 my0 pxq pyh flex centered">
-            <button className="f3 bolder color_white bg_black bow0 pointer pxh" onClick={go_bw}>
-                <span className="bg_black color_white pxh">B</span>
-                <span className="bg_white color_black pxh">&amp;</span>
-                <span className="bg_black color_white pxh">W</span>
-            </button>
-        </div>
-
+        <ColoredButton text="BLACK" color="color_black" bgcolor="bg_white" fn={go_bw} />
         <ColoredButton text="RED" color="color_white" bgcolor="bg_red" fn={go_red} />
         <ColoredButton text="GREEN" color="color_white" bgcolor="bg_memgreen" fn={go_green} />
         <ColoredButton text="BLUE" color="color_white" bgcolor="bg_neonblue" fn={go_blue} />
