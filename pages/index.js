@@ -118,6 +118,20 @@ const DisplayDate = (props) => {
     return display_norgb({ h0, h1, m0, m1, s0, s1 }, color);
 }
 
+const ColoredButton = ({ text, color, bgcolor, fn }) => {
+    let letters = text.split("");
+
+    //bg_red bo_black bowq color_white mxq pxh =>odd
+    //bg_red bo_black bowq color_white pxh =>even
+    let css1 = `${bgcolor} ${color} bo_black bowq mxq pxh`;
+    let css2 = `${bgcolor} ${color} bo_black bowq pxh`;
+
+    let spans = letters.map((e, i) => (i % 2 == 0) ? <span key={i} className={css2}>{e}</span> : <span key={i} className={css1}>{e}</span>);
+    
+    return (<div className="flex stretch bg_white my0 pxq pyh">
+        <button className="f3 bolder color_black bg_white zero-border pointer" onClick={() => fn()}>{spans}</button>
+    </div>)
+}
 export default function Home() {
     const date = new Date();
     return (
@@ -147,38 +161,12 @@ export default function Home() {
                     <span className="bg_black color_white pxh">W</span>
                 </button>
             </div>
-            <div className="flex stretch bg_white my0 pxq pyh">
-                <button className="f3 bolder color_black bg_white zero-border pointer" onClick={go_red}>
-                    <span className="bg_red bo_black bowq color_white pxh">R</span>
-                    <span className="bg_red bo_black bowq color_white mxq pxh">E</span>
-                    <span className="bg_red bo_black bowq color_white pxh">D</span>
-                </button>
-            </div>
-            <div className="flex stretch bg_white my0 pxq pyh">
-                <button className="f3 bolder color_black bg_white zero-border pointer" onClick={go_green}>
-                    <span className="bg_memgreen bo_black bowq color_white pxh">G</span>
-                    <span className="bg_memgreen bo_black bowq color_white mxq pxh">R</span>
-                    <span className="bg_memgreen bo_black bowq color_white pxh">E</span>
-                    <span className="bg_memgreen bo_black bowq color_white mxq pxh">E</span>
-                    <span className="bg_memgreen bo_black bowq color_white pxh">N</span>
-                </button>
-            </div>
-            <div className="flex stretch bg_white my0 pxq pyh">
-                <button className="f3 bolder color_black bg_white zero-border pointer" onClick={go_blue}>
-                    <span className="bg_neonblue bo_black bowq color_white pxh">B</span>
-                    <span className="bg_neonblue bo_black bowq color_white mxq pxh">L</span>
-                    <span className="bg_neonblue bo_black bowq color_white pxh">U</span>
-                    <span className="bg_neonblue bo_black bowq color_white mxq pxh">E</span>
-                </button>
-            </div>
-            <div className="flex stretch bg_white my0 pxq pyh">
-                <button className="f3 bolder color_black bg_white zero-border pointer" onClick={go_pink}>
-                    <span className="bg_pink bo_black bowq color_white pxh">P</span>
-                    <span className="bg_pink bo_black bowq color_white mxq pxh">I</span>
-                    <span className="bg_pink bo_black bowq color_white pxh">N</span>
-                    <span className="bg_pink bo_black bowq color_white mxq pxh">K</span>
-                </button>
-            </div>
+
+            <ColoredButton text="BLUE" color="color_white" bgcolor="bg_red" fn={go_red}/>
+            <ColoredButton text="BLUE" color="color_white" bgcolor="bg_memgreen" fn={go_green}/>
+            <ColoredButton text="BLUE" color="color_white" bgcolor="bg_neonblue" fn={go_blue}/>
+            <ColoredButton text="PINK" color="color_white" bgcolor="bg_pink" fn={go_pink}/>
+
             <DisplayDate rgb="0" />
         </div>
     )
