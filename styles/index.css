@@ -54,10 +54,6 @@
   background: transparent;
 }
 
-.bg-blend {
-  background-color: transparent;
-}
-
 div.override-none {
   display: none !important;
 }

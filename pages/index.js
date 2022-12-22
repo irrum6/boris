@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import styled from "styled-components"
 
 let color = "rgb";
 const set_color = (x) => {
@@ -20,7 +21,7 @@ const go_pink = () => set_color("pink");
 const rgb_display = (data) => {
     const { h0, h1, m0, m1, s0, s1 } = data;
     return (<div className="flex row centered">
-        <div className="f4 bolder">
+        <div className="f6 bolder p1h">
             <span className="color_red bg_litegray mxq pxh">{h0}</span>
             <span className="color_red bg_litegray pxh">{h1}</span>
             <span>:</span>
@@ -41,7 +42,7 @@ const display_monochrome = (data) => {
     const spanCss2 = `${textColor} ${backgroundColor} pxh`;
 
     return (<div className="flex row centered">
-        <div className="f4 bolder">
+        <div className="f6 bolder p1h">
             <span className={`${spanCss1}`}>{h0}</span>
             <span className={`${spanCss2}`}>{h1}</span>
             <span>:</span>
@@ -127,11 +128,44 @@ const ColoredButton = ({ text, color, bgcolor, fn }) => {
     let css2 = `${bgcolor} ${color} bo_black bowq pxh`;
 
     let spans = letters.map((e, i) => (i % 2 == 0) ? <span key={i} className={css2}>{e}</span> : <span key={i} className={css1}>{e}</span>);
-    
-    return (<div className="flex stretch bg_white my0 pxq pyh">
-        <button className="f3 bolder color_black bg_white zero-border pointer" onClick={() => fn()}>{spans}</button>
+
+    let divCss = `flex ${bgcolor} stretch my0 pxq pyh flex centered`;
+    return (<div className={divCss}>
+        <button className="f3 bolder bg-transparent bow0 pointer" onClick={() => fn()}>{spans}</button>
     </div>)
 }
+const SideBar = () => {
+    return (<React.Fragment>
+        <div className="flex stretch bg_black my0 pxq pyh flex centered">
+            <button className="f3 bolder bg-transparent bow0 pointer pxh" onClick={go_rgb}>
+                <span className="bg_red pxh">R</span>
+                <span className="bg_green pxh">G</span>
+                <span className="bg_blue pxh">B</span>
+            </button>
+        </div>
+        <div className="flex stretch bg_violet2 my0 pxq pyh flex centered">
+            <button className="f3 bolder color_white bg_black bow0 pointer pxh" onClick={go_bw}>
+                <span className="bg_black color_white pxh">B</span>
+                <span className="bg_white color_black pxh">&amp;</span>
+                <span className="bg_black color_white pxh">W</span>
+            </button>
+        </div>
+
+        <ColoredButton text="RED" color="color_white" bgcolor="bg_red" fn={go_red} />
+        <ColoredButton text="GREEN" color="color_white" bgcolor="bg_memgreen" fn={go_green} />
+        <ColoredButton text="BLUE" color="color_white" bgcolor="bg_neonblue" fn={go_blue} />
+        <ColoredButton text="PINK" color="color_white" bgcolor="bg_pink" fn={go_pink} />
+    </React.Fragment>)
+}
+const MainBox = styled.div`
+    display:grid;
+    grid-template-columns:288px auto;
+
+    @media (max-width:576px){
+        display:grid;
+        grid-template-columns:auto;
+    }    
+`
 export default function Home() {
     const date = new Date();
     return (
@@ -147,27 +181,14 @@ export default function Home() {
                     <a href="/p24" className="no-decor color_white"><span>Puzzle 24</span></a>
                 </button>
             </div>
-            <div className="flex stretch bg_white my0 pxq pyh">
-                <button className="f3 bolder bg-blend zero-border pointer" onClick={go_rgb}>
-                    <span className="bg_red pxh">R</span>
-                    <span className="bg_green pxh">G</span>
-                    <span className="bg_blue pxh">B</span>
-                </button>
-            </div>
-            <div className="flex stretch bg_white my0 pxq pyh">
-                <button className="f3 bolder color_white bg_black zero-border pointer" onClick={go_bw}>
-                    <span className="bg_black color_white pxh">B</span>
-                    <span className="bg_white color_black pxh">&amp;</span>
-                    <span className="bg_black color_white pxh">W</span>
-                </button>
-            </div>
-
-            <ColoredButton text="BLUE" color="color_white" bgcolor="bg_red" fn={go_red}/>
-            <ColoredButton text="BLUE" color="color_white" bgcolor="bg_memgreen" fn={go_green}/>
-            <ColoredButton text="BLUE" color="color_white" bgcolor="bg_neonblue" fn={go_blue}/>
-            <ColoredButton text="PINK" color="color_white" bgcolor="bg_pink" fn={go_pink}/>
-
-            <DisplayDate rgb="0" />
+            <MainBox>
+                <div id="left">
+                    <SideBar />
+                </div>
+                <div id="Right">
+                    <DisplayDate rgb="0" />
+                </div>
+            </MainBox>
         </div>
     )
 }

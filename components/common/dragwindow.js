@@ -26,7 +26,7 @@ const CornerButton = styled.button`
  */
 const corner_button = (noclose, wid) => {
     if (noclose) {
-        return <CornerButton className="bg-blend">&#x25cf;</CornerButton>
+        return <CornerButton className="bg-transparent">&#x25cf;</CornerButton>
     }
     return <CornerButton className="bg_violet2" onClick={Close.bind(null, wid)}>&#x25AC;</CornerButton>
 }
