@@ -2,6 +2,10 @@
   border: 0;
 }
 
+.bos {
+  border-style: solid;
+}
+
 .text-center {
   text-align: center;
 }
