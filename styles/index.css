@@ -1,11 +1,3 @@
-.zero-border {
-  border: 0;
-}
-
-.bos {
-  border-style: solid;
-}
-
 .text-center {
   text-align: center;
 }
@@ -66,10 +58,6 @@
   background-color: transparent;
 }
 
-.black {
-  color: black;
-}
-
 div.override-none {
   display: none !important;
 }
@@ -80,10 +68,6 @@ div.override-none {
 
 .pointer {
   cursor: pointer;
-}
-
-.bo-solid {
-  border-style: solid;
 }
 
 .blend_pointer {
@@ -1334,236 +1318,288 @@ body {
 }
 
 .bow0 {
+  border-style: solid;
   border-width: 0;
 }
 
 .bowx0 {
+  border-style: solid;
   border-left-width: 0;
   border-right-width: 0;
 }
 
 .bowy0 {
+  border-style: solid;
   border-top-width: 0;
   border-bottom-width: 0;
 }
 
 .bora0 {
+  border-style: solid;
   border-radius: 0;
 }
 
 .bowq {
+  border-style: solid;
   border-width: 0.25rem;
 }
 
 .bowxq {
+  border-style: solid;
   border-left-width: 0.25rem;
   border-right-width: 0.25rem;
 }
 
 .bowyq {
+  border-style: solid;
   border-top-width: 0.25rem;
   border-bottom-width: 0.25rem;
 }
 
 .boraq {
+  border-style: solid;
   border-radius: 0.25rem;
 }
 
 .bowh {
+  border-style: solid;
   border-width: 0.5rem;
 }
 
 .bowxh {
+  border-style: solid;
   border-left-width: 0.5rem;
   border-right-width: 0.5rem;
 }
 
 .bowyh {
+  border-style: solid;
   border-top-width: 0.5rem;
   border-bottom-width: 0.5rem;
 }
 
 .borah {
+  border-style: solid;
   border-radius: 0.5rem;
 }
 
 .bow3q {
+  border-style: solid;
   border-width: 0.75rem;
 }
 
 .bowx3q {
+  border-style: solid;
   border-left-width: 0.75rem;
   border-right-width: 0.75rem;
 }
 
 .bowy3q {
+  border-style: solid;
   border-top-width: 0.75rem;
   border-bottom-width: 0.75rem;
 }
 
 .bora3q {
+  border-style: solid;
   border-radius: 0.75rem;
 }
 
 .bow1 {
+  border-style: solid;
   border-width: 1rem;
 }
 
 .bowx1 {
+  border-style: solid;
   border-left-width: 1rem;
   border-right-width: 1rem;
 }
 
 .bowy1 {
+  border-style: solid;
   border-top-width: 1rem;
   border-bottom-width: 1rem;
 }
 
 .bora1 {
+  border-style: solid;
   border-radius: 1rem;
 }
 
 .bow1q {
+  border-style: solid;
   border-width: 1.25rem;
 }
 
 .bowx1q {
+  border-style: solid;
   border-left-width: 1.25rem;
   border-right-width: 1.25rem;
 }
 
 .bowy1q {
+  border-style: solid;
   border-top-width: 1.25rem;
   border-bottom-width: 1.25rem;
 }
 
 .bora1q {
+  border-style: solid;
   border-radius: 1.25rem;
 }
 
 .bow1h {
+  border-style: solid;
   border-width: 1.5rem;
 }
 
 .bowx1h {
+  border-style: solid;
   border-left-width: 1.5rem;
   border-right-width: 1.5rem;
 }
 
 .bowy1h {
+  border-style: solid;
   border-top-width: 1.5rem;
   border-bottom-width: 1.5rem;
 }
 
 .bora1h {
+  border-style: solid;
   border-radius: 1.5rem;
 }
 
 .bow2 {
+  border-style: solid;
   border-width: 2rem;
 }
 
 .bowx2 {
+  border-style: solid;
   border-left-width: 2rem;
   border-right-width: 2rem;
 }
 
 .bowy2 {
+  border-style: solid;
   border-top-width: 2rem;
   border-bottom-width: 2rem;
 }
 
 .bora2 {
+  border-style: solid;
   border-radius: 2rem;
 }
 
 .bow2h {
+  border-style: solid;
   border-width: 2.5rem;
 }
 
 .bowx2h {
+  border-style: solid;
   border-left-width: 2.5rem;
   border-right-width: 2.5rem;
 }
 
 .bowy2h {
+  border-style: solid;
   border-top-width: 2.5rem;
   border-bottom-width: 2.5rem;
 }
 
 .bora2h {
+  border-style: solid;
   border-radius: 2.5rem;
 }
 
 .bow3 {
+  border-style: solid;
   border-width: 3rem;
 }
 
 .bowx3 {
+  border-style: solid;
   border-left-width: 3rem;
   border-right-width: 3rem;
 }
 
 .bowy3 {
+  border-style: solid;
   border-top-width: 3rem;
   border-bottom-width: 3rem;
 }
 
 .bora3 {
+  border-style: solid;
   border-radius: 3rem;
 }
 
 .bow4 {
+  border-style: solid;
   border-width: 4rem;
 }
 
 .bowx4 {
+  border-style: solid;
   border-left-width: 4rem;
   border-right-width: 4rem;
 }
 
 .bowy4 {
+  border-style: solid;
   border-top-width: 4rem;
   border-bottom-width: 4rem;
 }
 
 .bora4 {
+  border-style: solid;
   border-radius: 4rem;
 }
 
 .bow5 {
+  border-style: solid;
   border-width: 5rem;
 }
 
 .bowx5 {
+  border-style: solid;
   border-left-width: 5rem;
   border-right-width: 5rem;
 }
 
 .bowy5 {
+  border-style: solid;
   border-top-width: 5rem;
   border-bottom-width: 5rem;
 }
 
 .bora5 {
+  border-style: solid;
   border-radius: 5rem;
 }
 
 .bow6 {
+  border-style: solid;
   border-width: 6rem;
 }
 
 .bowx6 {
+  border-style: solid;
   border-left-width: 6rem;
   border-right-width: 6rem;
 }
 
 .bowy6 {
+  border-style: solid;
   border-top-width: 6rem;
   border-bottom-width: 6rem;
 }
 
 .bora6 {
+  border-style: solid;
   border-radius: 6rem;
 }
 

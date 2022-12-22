@@ -99,20 +99,24 @@ $v in $rems {
 @each $k,
 $v in $rems {
     .bow#{$k} {
+        border-style: solid;
         border-width: $v;
     }
 
     .bowx#{$k} {
+        border-style: solid;
         border-left-width: $v;
         border-right-width: $v;
     }
 
     .bowy#{$k} {
+        border-style: solid;
         border-top-width: $v;
         border-bottom-width: $v;
     }
 
     .bora#{$k} {
+        border-style: solid;
         border-radius: $v;
     }
 }

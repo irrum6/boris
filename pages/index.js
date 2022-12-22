@@ -1,9 +1,21 @@
 import React, { useEffect, useState } from "react"
-import { useNavigate, Router } from 'react-router-dom';
 
-let _rgb = "0";
-const set_rgb_true = () => _rgb = "1"
-const set_rgb_false = () => _rgb = "0";
+let color = "rgb";
+const set_color = (x) => {
+    let supported = ["rgb", "bw", "red", "green", "blue", "pink"];
+    if (supported.indexOf(x) < 0) {
+        return;
+    }
+    color = x;
+}
+
+const go_rgb = () => set_color("rgb");
+const go_bw = () => set_color("bw");
+const go_red = () => set_color("red");
+const go_green = () => set_color("green");
+const go_blue = () => set_color("blue");
+const go_pink = () => set_color("pink");
+
 
 const rgb_display = (data) => {
     const { h0, h1, m0, m1, s0, s1 } = data;
@@ -21,20 +33,59 @@ const rgb_display = (data) => {
     </div>);
 }
 
-const bw_display = (data) => {
+const display_monochrome = (data) => {
     const { h0, h1, m0, m1, s0, s1 } = data;
+    const { textColor, backgroundColor } = data;
+
+    const spanCss1 = `${textColor} ${backgroundColor} mxq pxh`;
+    const spanCss2 = `${textColor} ${backgroundColor} pxh`;
+
     return (<div className="flex row centered">
         <div className="f4 bolder">
-            <span className="bg_black color_white mxq pxh">{h0}</span>
-            <span className="bg_black color_white pxh">{h1}</span>
+            <span className={`${spanCss1}`}>{h0}</span>
+            <span className={`${spanCss2}`}>{h1}</span>
             <span>:</span>
-            <span className="bg_black color_white mxq pxh">{m0}</span>
-            <span className="bg_black color_white pxh">{m1}</span>
+            <span className={`${spanCss2}`}>{m0}</span>
+            <span className={`${spanCss1}`}>{m1}</span>
             <span>:</span>
-            <span className="bg_black color_white mxq pxh">{s0}</span>
-            <span className="bg_black color_white pxh">{s1}</span>
+            <span className={`${spanCss2}`}>{s0}</span>
+            <span className={`${spanCss1}`}>{s1}</span>
         </div>
     </div>);
+}
+
+const bw_display = (data) => display_monochrome({ ...data, textColor: "color_white", backgroundColor: "bg_black" });
+
+const display_red = (data) => display_monochrome({ ...data, textColor: "color_white", backgroundColor: "bg_red" });
+
+const display_green = (data) => display_monochrome({ ...data, textColor: "color_white", backgroundColor: "bg_memgreen" });
+
+const display_blue = (data) => display_monochrome({ ...data, textColor: "color_white", backgroundColor: "bg_neonblue" });
+
+const display_pink = (data) => display_monochrome({ ...data, textColor: "color_white", backgroundColor: "bg_pink" });
+
+const display_norgb = (data, color) => {
+    let returnable = null;
+    switch (color) {
+        case "bw":
+            returnable = bw_display(data);
+            break;
+        case "red":
+            returnable = display_red(data);
+            break;
+        case "green":
+            returnable = display_green(data);
+            break;
+        case "blue":
+            returnable = display_blue(data);
+            break;
+        case "pink":
+            returnable = display_pink(data);
+            break;
+        default:
+            returnable = bw_display(data);
+    }
+    return returnable;
 }
 
 const DisplayDate = (props) => {
@@ -61,10 +112,10 @@ const DisplayDate = (props) => {
     const s0 = Math.floor(s / 10);
     const s1 = s % 10;
 
-    if (_rgb == "1") {
+    if (color == "rgb") {
         return rgb_display({ h0, h1, m0, m1, s0, s1 });
     }
-    return bw_display({ h0, h1, m0, m1, s0, s1 });
+    return display_norgb({ h0, h1, m0, m1, s0, s1 }, color);
 }
 
 export default function Home() {
@@ -83,17 +134,49 @@ export default function Home() {
                 </button>
             </div>
             <div className="flex stretch bg_white my0 pxq pyh">
-                <button className="f3 bolder bg-blend zero-border pointer" onClick={set_rgb_true}>
+                <button className="f3 bolder bg-blend zero-border pointer" onClick={go_rgb}>
                     <span className="bg_red pxh">R</span>
                     <span className="bg_green pxh">G</span>
                     <span className="bg_blue pxh">B</span>
                 </button>
             </div>
             <div className="flex stretch bg_white my0 pxq pyh">
-                <button className="f3 bolder color_white bg_black zero-border pointer" onClick={set_rgb_false}>
+                <button className="f3 bolder color_white bg_black zero-border pointer" onClick={go_bw}>
                     <span className="bg_black color_white pxh">B</span>
                     <span className="bg_white color_black pxh">&amp;</span>
                     <span className="bg_black color_white pxh">W</span>
+                </button>
+            </div>
+            <div className="flex stretch bg_white my0 pxq pyh">
+                <button className="f3 bolder color_black bg_white zero-border pointer" onClick={go_red}>
+                    <span className="bg_red bo_black bowq color_white pxh">R</span>
+                    <span className="bg_red bo_black bowq color_white mxq pxh">E</span>
+                    <span className="bg_red bo_black bowq color_white pxh">D</span>
+                </button>
+            </div>
+            <div className="flex stretch bg_white my0 pxq pyh">
+                <button className="f3 bolder color_black bg_white zero-border pointer" onClick={go_green}>
+                    <span className="bg_memgreen bo_black bowq color_white pxh">G</span>
+                    <span className="bg_memgreen bo_black bowq color_white mxq pxh">R</span>
+                    <span className="bg_memgreen bo_black bowq color_white pxh">E</span>
+                    <span className="bg_memgreen bo_black bowq color_white mxq pxh">E</span>
+                    <span className="bg_memgreen bo_black bowq color_white pxh">N</span>
+                </button>
+            </div>
+            <div className="flex stretch bg_white my0 pxq pyh">
+                <button className="f3 bolder color_black bg_white zero-border pointer" onClick={go_blue}>
+                    <span className="bg_neonblue bo_black bowq color_white pxh">B</span>
+                    <span className="bg_neonblue bo_black bowq color_white mxq pxh">L</span>
+                    <span className="bg_neonblue bo_black bowq color_white pxh">U</span>
+                    <span className="bg_neonblue bo_black bowq color_white mxq pxh">E</span>
+                </button>
+            </div>
+            <div className="flex stretch bg_white my0 pxq pyh">
+                <button className="f3 bolder color_black bg_white zero-border pointer" onClick={go_pink}>
+                    <span className="bg_pink bo_black bowq color_white pxh">P</span>
+                    <span className="bg_pink bo_black bowq color_white mxq pxh">I</span>
+                    <span className="bg_pink bo_black bowq color_white pxh">N</span>
+                    <span className="bg_pink bo_black bowq color_white mxq pxh">K</span>
                 </button>
             </div>
             <DisplayDate rgb="0" />
