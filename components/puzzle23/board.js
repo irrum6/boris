@@ -24,7 +24,14 @@ const Board49 = styled.div`
     grid-template-columns: repeat(7, 1fr);
     grid-gap:2px 2px;
 `
-
+/**
+ * Create NumberCell (button with number)
+ * @param {Function} func 
+ * @param {Function} func2 
+ * @param {Object} it 
+ * @param {Number} ind 
+ * @returns 
+ */
 function numbToCell(func, func2, it, ind) {
     let { value, index } = it;
     switch (value) {
@@ -35,39 +42,27 @@ function numbToCell(func, func2, it, ind) {
                 clicker={() => func(ind)} clicker2={() => func2(ind)}></NumberCell>
     }
 }
+// will generate boards for us
+function compositor(RComp, data) {
+    return <RComp>{data}</RComp>;
+}
 
 export default ({ numbers, fn, fn2 }) => {
     let lena = numbers.length;
     let ncells = numbers.map(numbToCell.bind(null, fn, fn2));
 
     if (lena == 16) {
-        return (
-            <Board16>
-                {ncells}
-            </Board16>
-        );
+        return compositor(Board16, ncells);
     }
 
     if (lena == 36) {
-        return (
-            <Board36>
-                {ncells}
-            </Board36>
-        );
+        return compositor(Board36, ncells);
     }
 
     if (lena == 49) {
-        return (
-            <Board49>
-                {ncells}
-            </Board49>
-        );
+        return compositor(Board49, ncells);
     }
-
+    
     //default
-    return (
-        <Board25>
-            {ncells}
-        </Board25>
-    );
+    return compositor(Board25, ncells);
 } 
