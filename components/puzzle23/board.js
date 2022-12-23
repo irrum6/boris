@@ -3,14 +3,14 @@ import styled from "styled-components"
 
 import NumberCell, { EmptyCell } from "./cell"
 
-const Board25 = styled.div`
-    display:grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap:2px 2px;
-`
 const Board16 = styled.div`
     display:grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-gap:2px 2px;
+`
+const Board25 = styled.div`
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
     grid-gap:2px 2px;
 `
 const Board36 = styled.div`
@@ -18,7 +18,6 @@ const Board36 = styled.div`
     grid-template-columns: repeat(6, 1fr);
     grid-gap:2px 2px;
 `
-
 const Board49 = styled.div`
     display:grid;
     grid-template-columns: repeat(7, 1fr);
@@ -42,26 +41,26 @@ function numbToCell(func, it, ind) {
     }
 }
 // will generate boards for us
-function compositor(RComp, data) {
-    return <RComp>{data}</RComp>;
+function compositor(RComp, id, data) {
+    return <RComp id={id}>{data}</RComp>;
 }
 
-export default ({ numbers, fn }) => {
+export default ({ id, numbers, fn }) => {
     let lena = numbers.length;
     let ncells = numbers.map(numbToCell.bind(null, fn));
 
     if (lena == 16) {
-        return compositor(Board16, ncells);
+        return compositor(Board16, id, ncells);
     }
 
     if (lena == 36) {
-        return compositor(Board36, ncells);
+        return compositor(Board36, id, ncells);
     }
 
     if (lena == 49) {
-        return compositor(Board49, ncells);
+        return compositor(Board49, id, ncells);
     }
 
     //default
-    return compositor(Board25, ncells);
+    return compositor(Board25, id, ncells);
 } 

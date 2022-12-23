@@ -15,8 +15,8 @@ const Box = styled.div`
     }
 `
 
-export default ({ modefn }) => {
-    return <Box id="right">
+export default ({ id, modefn }) => {
+    return <Box id={id}>
         <div className="f2 bolder color_orange pxh">Content</div>
     </Box>
 }

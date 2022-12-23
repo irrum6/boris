@@ -23,8 +23,8 @@ const ModeButton = styled.button`
     border:4px solid black;
 `
 // const closer
-export default ({ modefn }) => {
-    return <Box id="right">
+export default ({id, modefn }) => {
+    return <Box id={id}>
         <ModeButton onClick={() => modefn(15)}>15 Tile</ModeButton>
         <ModeButton onClick={() => modefn(24)}>24 Tile</ModeButton>
         <ModeButton onClick={() => modefn(35)}>35 Tile</ModeButton>

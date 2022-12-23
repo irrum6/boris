@@ -31,15 +31,100 @@ const Container = styled.div`
         margin-top:12px;
     }
 `
+let swipeLeft = false;
+let swipeRight = false;
+
+let startx = 0;
+let x = 0;
+
+
+function getSwipeX(event) {
+    return event["touches"][0].clientX;
+}
+
+//first left swipe show mode switch
+//second left swipe ignore
+//swipe left settings open show board
+function onSwipeLeft(event) {
+    // console.log("left", swipeLeft, swipeRight);
+    let left = document.getElementById("left");
+    let right = document.getElementById("right");
+    let center = document.getElementById("board");
+
+    if (swipeRight) {
+        //restore
+        right.style.display = "none";
+        left.style.display = "none";
+        center.style.display = "grid";
+        swipeLeft = false;
+        swipeRight = false;
+        return;
+    }
+
+    if (swipeLeft) {
+        return;
+    }
+
+    right.style.display = "grid";
+    left.style.display = "none";
+    center.style.display = "none";
+    swipeLeft = true;
+
+}
+
+//first right swipe settings
+//second right swipe ignore
+//swipe Right modes open show board
+function onSwipeRight(event) {
+    // console.log("right", swipeLeft, swipeRight);
+    let left = document.getElementById("left");
+    let right = document.getElementById("right");
+    let center = document.getElementById("board");
+
+    if (swipeLeft) {
+        right.style.display = "none";
+        left.style.display = "none";
+        center.style.display = "grid";
+        swipeLeft = false;
+        swipeRight = false;
+        return;
+    }
+
+    if (swipeRight) {
+        return;
+    }
+
+    right.style.display = "none";
+    left.style.display = "grid";
+    center.style.display = "none";
+    swipeRight = true;
+}
+
+function onSwipeStart(event) {
+    startx = getSwipeX(event);
+}
+
+function onSwipe(event) {
+    x = getSwipeX(event);
+}
+
+function onSwipeEnd(event) {
+    if (x < startx) {
+        onSwipeLeft(event);
+        return;
+    }
+    if (x > startx) {
+        onSwipeRight(event);
+        return;
+    }
+}
+
 export default ({ numbers, fn, modefn }) => (
     <React.Fragment>
-        <Container>
-            {/* left */}
+        <Container onTouchStart={onSwipeStart} onTouchMove={onSwipe} onTouchEnd={onSwipeEnd}>
             <Settings id="left" />
-            {/* center */}
             <Board id="board" numbers={numbers} fn={fn} />
-            {/* right */}
-            <ModeSwitcher modefn={modefn} />
+            <ModeSwitcher id="right" modefn={modefn} />
         </Container>
     </React.Fragment>
 )
