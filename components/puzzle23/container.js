@@ -109,6 +109,11 @@ function onSwipe(event) {
 }
 
 function onSwipeEnd(event) {
+    console.log(x, startx);
+    //ignore small swipes to enable clicks
+    if (Math.abs(x - startx) < 200) {
+        return;
+    }
     if (x < startx) {
         onSwipeLeft(event);
         return;
