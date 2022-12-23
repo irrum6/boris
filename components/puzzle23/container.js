@@ -31,13 +31,13 @@ const Container = styled.div`
         margin-top:12px;
     }
 `
-export default ({ numbers, fn, fn2, modefn }) => (
+export default ({ numbers, fn, modefn }) => (
     <React.Fragment>
         <Container>
             {/* left */}
             <Settings id="left" />
             {/* center */}
-            <Board id="board" numbers={numbers} fn={fn} fn2={fn2} />
+            <Board id="board" numbers={numbers} fn={fn} />
             {/* right */}
             <ModeSwitcher modefn={modefn} />
         </Container>

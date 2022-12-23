@@ -32,14 +32,13 @@ const Board49 = styled.div`
  * @param {Number} ind 
  * @returns 
  */
-function numbToCell(func, func2, it, ind) {
+function numbToCell(func, it, ind) {
     let { value, index } = it;
     switch (value) {
         case -2:
             return <EmptyCell key={ind}></EmptyCell>
         default:
-            return <NumberCell key={ind} indexInArray={ind} selfIndex={index} number={value}
-                clicker={() => func(ind)} clicker2={() => func2(ind)}></NumberCell>
+            return <NumberCell key={ind} indexInArray={ind} selfIndex={index} number={value} clicker={() => func(ind)} ></NumberCell>
     }
 }
 // will generate boards for us
@@ -47,9 +46,9 @@ function compositor(RComp, data) {
     return <RComp>{data}</RComp>;
 }
 
-export default ({ numbers, fn, fn2 }) => {
+export default ({ numbers, fn }) => {
     let lena = numbers.length;
-    let ncells = numbers.map(numbToCell.bind(null, fn, fn2));
+    let ncells = numbers.map(numbToCell.bind(null, fn));
 
     if (lena == 16) {
         return compositor(Board16, ncells);
@@ -62,7 +61,7 @@ export default ({ numbers, fn, fn2 }) => {
     if (lena == 49) {
         return compositor(Board49, ncells);
     }
-    
+
     //default
     return compositor(Board25, ncells);
 } 
