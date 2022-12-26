@@ -111,7 +111,7 @@ function onSwipe(event) {
 function onSwipeEnd(event) {
     console.log(x, startx);
     //ignore small swipes to enable clicks
-    if (Math.abs(x - startx) < 200) {
+    if (Math.abs(x - startx) < 100) {
         return;
     }
     if (x < startx) {
@@ -124,12 +124,18 @@ function onSwipeEnd(event) {
     }
 }
 
+const Swiper = styled.div`
+    @media (min-width:900px){
+        display:none
+    }
+`
 export default ({ numbers, fn, modefn }) => (
     <React.Fragment>
-        <Container onTouchStart={onSwipeStart} onTouchMove={onSwipe} onTouchEnd={onSwipeEnd}>
+        <Container>
             <Settings id="left" />
             <Board id="board" numbers={numbers} fn={fn} />
             <ModeSwitcher id="right" modefn={modefn} />
         </Container>
+        <Swiper className="f3 borah text-center myh" onTouchStart={onSwipeStart} onTouchMove={onSwipe} onTouchEnd={onSwipeEnd}>Swipe</Swiper>
     </React.Fragment>
 )

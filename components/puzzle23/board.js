@@ -49,18 +49,22 @@ export default ({ id, numbers, fn }) => {
     let lena = numbers.length;
     let ncells = numbers.map(numbToCell.bind(null, fn));
 
-    if (lena == 16) {
-        return compositor(Board16, id, ncells);
+    let board = null;
+    switch (lena) {
+        case 16:
+            board = compositor(Board16, id, ncells);
+            break;
+        case 25:
+            board = compositor(Board25, id, ncells);
+            break;
+        case 36:
+            board = compositor(Board36, id, ncells);
+            break;
+        case 49:
+            board = compositor(Board49, id, ncells);
+            break;
+        default:
+            board = compositor(Board25, id, ncells);
     }
-
-    if (lena == 36) {
-        return compositor(Board36, id, ncells);
-    }
-
-    if (lena == 49) {
-        return compositor(Board49, id, ncells);
-    }
-
-    //default
-    return compositor(Board25, id, ncells);
+    return board;
 } 

@@ -1,5 +1,5 @@
 import { React, Component } from 'react';
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 
 const Box = styled.div`
     display: flex;
@@ -45,12 +45,11 @@ class Navbar extends Component {
         return (<Box>
             <a className="color_white bolder" href="/">&lt;&lt; უკან</a>
             <div className='ph'>
-                <span className="ph f2">Time:<span>{props.time}</span></span>
-                <span className="ph f2">Moves:<span>{props.moves}</span></span>
-                <ShowRecords className="ph f2 bolder borah" onClick={props.onShowRecords}>Records</ShowRecords>
-                <PlayPause className="ph f2 bolder borah">Pause</PlayPause>
-                <NewGamer className="ph f2 bolder borah" onClick={props.onNewGame} >New Game</NewGamer>
-
+                <span className="ph f1h">Time:<span>{props.time}</span></span>
+                <span className="ph f1h">Moves:<span>{props.moves}</span></span>
+                <ShowRecords className="ph f1h bolder borah" onClick={props.onShowRecords}>Records</ShowRecords>
+                <PlayPause className="ph f1h bolder borah">Pause</PlayPause>
+                <NewGamer className="ph f1h bolder borah" onClick={props.onNewGame} >New Game</NewGamer>
             </div>
         </Box>)
     }
