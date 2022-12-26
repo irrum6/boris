@@ -1,7 +1,4 @@
 module.exports = {
-  future: {
-    webpack5: true,
-  },
   // fix hydration error with styled components
   reactStrictMode: true,
   compiler: {
